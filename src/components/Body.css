@@ -14,15 +14,16 @@
 }
 
 .block-list-container {
-  width: 500px;
-  max-width: var(--bw);
+  width: min(90vw, 350px);
+  min-width: 150px;
+  max-width: 100%;
   height: auto;
   border-color: white;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   padding: 15px;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px auto;
   font-size: 20px;
 }
 
@@ -30,7 +31,6 @@
   font-weight: var(--fw-900);
   letter-spacing: 0.5px;
 }
-
 
 .block-list {
   list-style-type: none;
