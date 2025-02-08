@@ -2,6 +2,7 @@
   --fw-900: 900;
   --bw: 500px;
   --bh: 500px;
+  --bg: "#fdf0dc";
 }
 
 .parent-container {
@@ -25,6 +26,7 @@
   text-align: center;
   margin: 20px auto;
   font-size: 20px;
+  background-color: var(--bg);
 }
 
 .title {
