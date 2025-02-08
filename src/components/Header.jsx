@@ -9,7 +9,7 @@ const Header = () => {
         <label
           className="daysLeft"
           style={{
-            fontSize: "37px",
+            fontSize: "28px",
             position: "fixed",
             top: "0",
             left: "0",
@@ -22,9 +22,10 @@ const Header = () => {
             justifyContent: "center",
             height: "70px",
             boxShadow: "0 4px 5px rgba(0, 0, 0, 0.3",
+            padding: "5px 5px 5px 5px",
           }}
         >
-          Days left: {difference1}/{difference1 + 1}
+          Days Until Ramadhan: {difference1}/{difference1 + 1}
         </label>
       </div>
     </div>

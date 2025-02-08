@@ -26,15 +26,16 @@ const Body = () => {
     19.3, 20.4, 22.1, 23.2, 24.3, 25.4, 27.1, 28.2, 29.3, 30.4,
   ];
 
-
-  const names = ["Yusuf/Hamzah", "Aasim", "Wasim", "Yoosuf", "Shameer"];
+  const names = ["Hamzah/Yusuf", "Aasim", "Wasim", "Yoosuf", "Shameer"];
 
   const parts = [part1, part2, part3, part4, part5];
 
   let days = [];
+  let date = new Date("2025-02-28");
 
-  for (let i = 1; i < 30; i++) {
-    days.push(i);
+  for (let i = 1; i <= 30; i++) {
+    days.push([i, date.toDateString()]);
+    date.setDate(date.getDate() + 1);
   }
 
   return (
@@ -47,11 +48,44 @@ const Body = () => {
                 <label className="title">{name}</label>
               </div>
               <ul className="block-list">
-                {parts[i].map((part, j) => (
-                  <li key={part} className="block-list-child">
-                    Day: {days[j]} Part: {part}
-                  </li>
-                ))}
+                {parts[i].map((part, j) => {
+                  const isToday = days[j][1] === new Date().toDateString();
+                  return (
+                    <li key={part} className="block-list-child">
+                      <label
+                        style={{
+                          color: isToday ? "green" : "rgb(22, 60, 94)",
+                          marginRight: "10px",
+                        }}
+                      >
+                        <span
+                          className="list-element"
+                          style={{
+                            color: isToday ? "green" : "rgb(22, 60, 94)",
+                            fontWeight: "600",
+                          }}
+                        >
+                          Day:
+                        </span>{" "}
+                        {days[j][0]}
+                      </label>{" "}
+                      <label
+                        style={{ color: isToday ? "green" : "rgb(22, 60, 94)" }}
+                      >
+                        <span
+                          className="list-element"
+                          style={{
+                            color: isToday ? "green" : "rgb(22, 60, 94)",
+                            fontWeight: "600",
+                          }}
+                        >
+                          Part:{" "}
+                        </span>
+                        {part}
+                      </label>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
