@@ -14,7 +14,6 @@
 body {
   background-color: var(--bg-colour);
   background-image: url(https://firebasestorage.googleapis.com/v0/b/mazjid-a37fd.appspot.com/o/mazjid-a37fd%2Fassets%2Fimg%2Ftile1.svg?alt=media);
-  overflow-x: hidden;
 }
 
 .header-container {
@@ -27,21 +26,7 @@ body {
 }
 
 .main-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
 }
 
 
-@keyframes slideUp {
-  from {
-    display: none;
-    transform: translateY(250px);
-    opacity: 0;
-  }
-  to {
-    display: contents;
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
