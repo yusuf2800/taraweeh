@@ -55,7 +55,7 @@ const Body = () => {
                       <label
                         style={{
                           color: isToday ? "green" : "rgb(22, 60, 94)",
-                          marginRight: "10px",
+                          marginRight: "20px",
                         }}
                       >
                         <span
