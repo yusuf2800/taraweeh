@@ -21,7 +21,7 @@ const Header = () => {
           height: "70px",
           boxShadow: "0 4px 5px rgba(0, 0, 0, 0.3",
           padding: "5px 5px 5px 5px",
-          position: "absolute"
+          position: "fixed"
         }}
       >
         Days Until Ramadhan: {difference1}/{difference1 + 1}
