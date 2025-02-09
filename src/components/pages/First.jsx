@@ -1,4 +1,4 @@
-import "./First.css";
+import "./Style.css";
 
 const First = () => {
   const parts = [

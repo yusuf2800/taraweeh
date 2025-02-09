@@ -8,9 +8,6 @@
   box-sizing: border-box;
 }
 
-
-
-
 body {
   background-color: var(--bg-colour);
   font-family: Arial, sans-serif;
@@ -45,4 +42,65 @@ body {
 
 .child-link:hover {
   background-color: rgba(22, 60, 94, 0.159);
+}
+
+.hs {
+  animation: slideDown 2s ease-in-out;
+}
+
+.ap,
+.ys {
+  animation: slideLeft 2s ease-in-out;
+}
+
+.wm {
+  animation: slideRight 2s ease-in-out;
+}
+
+.sa {
+  animation: slideUp 2s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

@@ -1,4 +1,4 @@
-import "./Third.css";
+import "./Style.css";
 
 const Third = () => {
   const parts = [

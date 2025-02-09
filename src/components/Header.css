@@ -1,0 +1,33 @@
+.daysLeft {
+  font-size: 28px;
+  top: 0; /* Start above the screen */
+  left: 0;
+  right: 0;
+  background-color: #fdecd3;
+  opacity: 0.95;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  position: fixed;
+  z-index: 1;
+  
+}
+
+.header-container {
+  animation: slideDown 2s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    top: -70px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}

@@ -10,7 +10,7 @@ import Fifth from "./components/pages/Fifth.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/taraweeh/",
+    path: "/taraweeh",
     element: <App />,
   },
   {

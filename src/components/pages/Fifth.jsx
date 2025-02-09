@@ -1,4 +1,4 @@
-import "./Fifth.css";
+import "./Style.css";
 
 const Fifth = () => {
   const parts = [

@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 const Body = () => {
   const names = [
-    { name: "Hamzah/Yusuf", path: "/hb-yp" },
-    { name: "Aasim", path: "/aasim" },
-    { name: "Wasim", path: "/wasim" },
-    { name: "Yoosuf", path: "/yoosuf" },
-    { name: "Shameer", path: "/shameer" },
+    { id: "hs", name: "hamzah/yusuf", path: "/hb-yp" },
+    { id: "ap", name: "aasim", path: "/aasim" },
+    { id: "wm", name: "wasim", path: "/wasim" },
+    { id: "ys", name: "yoosuf", path: "/yoosuf" },
+    { id: "sa", name: "shameer", path: "/shameer" },
   ];
 
   return (
     <div className="parent-container">
       {names.map((person, i) => (
-        <Link key={i} to={person.path} className="child-link">
+        <Link key={i} to={person.path} className={`child-link ${person.id}`}>
           {person.name}
         </Link>
       ))}
