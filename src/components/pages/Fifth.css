@@ -38,7 +38,7 @@
 
 table {
   width: 100%;
-  border-spacing: 30px 15px;
+  border-spacing: 35.3px 20px;
 }
 
 .child-btn {
@@ -59,8 +59,3 @@ table {
 .child-btn:hover {
   background-color: rgba(22, 60, 94, 0.159);
 }
-
-
-
-
-
