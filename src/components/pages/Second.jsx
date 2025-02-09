@@ -14,7 +14,7 @@ const Second = () => {
     "http://janathimessage.co.uk/quran/para6.pdf#page=9",
     "http://janathimessage.co.uk/quran/para7.pdf#page=16",
     "http://janathimessage.co.uk/quran/para8.pdf#page=21",
-    "http://janathimessage.co.uk/quran/para10.pdf#page=8",
+    "http://janathimessage.co.uk/quran/para10.pdf",
     "http://janathimessage.co.uk/quran/para11.pdf",
     "http://janathimessage.co.uk/quran/para12.pdf",
     "http://janathimessage.co.uk/quran/para13.pdf",
