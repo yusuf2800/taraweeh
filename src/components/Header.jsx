@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="header-container text">
       <label className="daysLeft">
-        Days Until Ramadhan: {difference1}/{difference1 + 1}
+        Days Until Ramadan: {difference1}/{difference1 + 1}
       </label>
     </header>
   );

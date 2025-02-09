@@ -33,6 +33,8 @@ const First = () => {
     "http://janathimessage.co.uk/quran/para29.pdf#page=25",
   ];
 
+  const sides = ["8", "8", "6.5", "7", "8.5", "8", "8", "7", "8", "5", "7.5", "6.5", "8.5", "7", "6.5", "7.5", "7", "5", "6", "6", "7", "7", "8.5", "7.5"]
+
   let days = [];
   let date = new Date("2025-02-28");
 
@@ -49,12 +51,14 @@ const First = () => {
             <tr>
               <th>Day</th>
               <th>Part</th>
+              <th>Sides</th>
               <th>File</th>
             </tr>
             {parts.map((part, i) => (
               <tr key={i}>
                 <td>{days[i][0]}</td>
                 <td>{part}</td>
+                <td>{sides[i]}</td>
                 <td>
                   <a href={files[i]} target="_blank">
                     <button className="child-btn">View</button>

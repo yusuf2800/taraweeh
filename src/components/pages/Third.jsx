@@ -47,12 +47,14 @@ const Third = () => {
             <tr>
               <th>Day</th>
               <th>Part</th>
+              <th>Sides</th>
               <th>File</th>
             </tr>
             {parts.map((part, i) => (
               <tr key={i}>
                 <td>{days[i][0]}</td>
                 <td>{part}</td>
+                <td></td>
                 <td>
                   <a href={files[i]} target="_blank">
                     <button className="child-btn">View</button>

@@ -33,6 +33,8 @@ const Second = () => {
     "http://janathimessage.co.uk/quran/para30.pdf",
   ];
 
+  const sides = ["7", "6.5", "7", "6.5", "7.5", "8", "5", "7", "6.5","9"]
+
   let days = [];
   let date = new Date("2025-02-28");
 
@@ -49,12 +51,14 @@ const Second = () => {
             <tr>
               <th>Day</th>
               <th>Part</th>
+              <th>Sides</th>
               <th>File</th>
             </tr>
             {parts.map((part, i) => (
               <tr key={i}>
                 <td>{days[i][0]}</td>
                 <td>{part}</td>
+                <td>{sides[i]}</td>
                 <td>
                   <a href={files[i]} target="_blank">
                     <button className="child-btn">View</button>
