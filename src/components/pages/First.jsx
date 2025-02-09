@@ -62,7 +62,9 @@ const First = () => {
                 <td>{days[i][0]}</td>
                 <td>{part}</td>
                 <td>
-                  <a href={files} target="_blank">View</a>
+                  <a href={files[i]} target="_blank">
+                    <button className="child-btn">View</button>
+                  </a>
                 </td>
               </tr>
             ))}

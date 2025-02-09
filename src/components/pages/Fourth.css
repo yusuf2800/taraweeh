@@ -40,8 +40,21 @@ table {
   border-spacing: 5px 10px;
 }
 
+.child-btn {
+  width: 90px;
+  padding: 8px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
 
-
-
-
-
+.child-btn:hover {
+  background-color: rgba(22, 60, 94, 0.159);
+}
