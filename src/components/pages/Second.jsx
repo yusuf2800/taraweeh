@@ -55,6 +55,7 @@ const Second = () => {
             <tr>
               <th>Day</th>
               <th>Part</th>
+              <th>File</th>
             </tr>
             {parts.map((part, i) => (
               <tr key={i}>
