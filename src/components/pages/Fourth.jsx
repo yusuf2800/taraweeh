@@ -1,9 +1,32 @@
 import "./Style.css";
+import { Link } from "react-router-dom";
 
 const Fourth = () => {
   const parts = [
-    1.4, 3.1, 4.2, 5.3, 6.4, 8.1, 9.2, 10.3, 11.4, 13.1, 14.2, 15.3, 16.4, 18.1,
-    19.2, 20.3, 21.4, 23.1, 24.2, 25.3, 26.4, 28.1, 29.2, 30.3,
+    "1.4",
+    "3.1",
+    "4.2",
+    "5.3",
+    "6.4",
+    "7.5",
+    "9.2",
+    "10.3",
+    "11.4",
+    "12.5",
+    "14.2",
+    "15.3",
+    "16.4",
+    "17.5",
+    "19.2",
+    "20.3",
+    "21.4",
+    "23.1",
+    "24.2",
+    "25.3",
+    "26.4",
+    "28.1",
+    "29.2",
+    "30.3",
   ];
   const files = [
     "http://janathimessage.co.uk/quran/para1.pdf#page=22",
@@ -65,6 +88,20 @@ const Fourth = () => {
           </table>
         </div>
       </div>
+      <Link key={Math.random()} to="/taraweeh">
+        <button className="home">
+          <svg
+            className="back"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="rgb(22, 60, 94)"
+          >
+            <path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
+          </svg>
+        </button>
+      </Link>
     </div>
   );
 };

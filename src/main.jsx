@@ -14,23 +14,23 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/hb-yp",
+    path: "/taraweeh/hb-yp",
     element: <First />,
   },
   {
-    path: "/aasim",
+    path: "/taraweeh/aasim",
     element: <Second />,
   },
   {
-    path: "/wasim",
+    path: "/taraweeh/wasim",
     element: <Third />,
   },
   {
-    path: "/yoosuf",
+    path: "/taraweeh/yoosuf",
     element: <Fourth />,
   },
   {
-    path: "/shameer",
+    path: "/taraweeh/shameer",
     element: <Fifth />,
   },
 ]);

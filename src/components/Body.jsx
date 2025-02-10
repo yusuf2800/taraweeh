@@ -13,7 +13,7 @@ const Body = () => {
   return (
     <div className="parent-container">
       {names.map((person, i) => (
-        <Link key={i} to={person.path} className={`child-link ${person.id}`}>
+        <Link key={i} to={"/taraweeh"+person.path} className={`child-link ${person.id}`}>
           {person.name}
         </Link>
       ))}

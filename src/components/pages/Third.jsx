@@ -1,9 +1,32 @@
 import "./Style.css";
+import { Link } from "react-router-dom";
 
 const Third = () => {
   const parts = [
-    1.3, 2.4, 4.1, 5.2, 6.3, 7.4, 9.1, 10.2, 11.3, 12.4, 14.1, 15.2, 16.3, 17.4,
-    19.1, 20.2, 21.3, 22.4, 24.1, 25.2, 26.3, 27.4, 29.1, 30.2,
+    "1.3",
+    "2.4",
+    "4.1",
+    "5.2",
+    "6.3",
+    "7.4",
+    "9.1",
+    "10.2",
+    "11.3",
+    "12.4",
+    "13.5",
+    "15.2",
+    "16.3",
+    "17.4",
+    "19.1",
+    "20.2",
+    "21.3",
+    "22.4",
+    "24.1",
+    "25.2",
+    "26.3",
+    "27.4",
+    "29.1",
+    "30.2",
   ];
   const files = [
     "http://janathimessage.co.uk/quran/para1.pdf#page=15",
@@ -53,7 +76,7 @@ const Third = () => {
             {parts.map((part, i) => (
               <tr key={i}>
                 <td>{days[i][0]}</td>
-                <td>{part}</td>
+                <td></td>
                 <td></td>
                 <td>
                   <a href={files[i]} target="_blank">
@@ -65,6 +88,20 @@ const Third = () => {
           </table>
         </div>
       </div>
+      <Link key={Math.random()} to="/taraweeh">
+        <button className="home">
+          <svg
+            className="back"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="rgb(22, 60, 94)"
+          >
+            <path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
+          </svg>
+        </button>
+      </Link>
     </div>
   );
 };
