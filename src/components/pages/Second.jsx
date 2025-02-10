@@ -2,33 +2,6 @@ import "./Style.css";
 import { Link } from "react-router-dom";
 
 const Second = () => {
-  const parts = [
-    "1.2",
-    "2.3",
-    "3.4",
-    "5.1",
-    "6.2",
-    "7.3",
-    "8.4",
-    "9.5",
-    "11.2",
-    "12.3",
-    "13.4",
-    "14.5",
-    "16.2",
-    "17.3",
-    "18.4",
-    "20.1",
-    "21.2",
-    "22.3",
-    "23.4",
-    "25.1",
-    "26.2",
-    "27.3",
-    "28.4",
-    "30.1",
-  ];
-
   const files = [
     "http://janathimessage.co.uk/quran/para1.pdf#page=9",
     "http://janathimessage.co.uk/quran/para2.pdf#page=16",
@@ -64,6 +37,19 @@ const Second = () => {
   for (let i = 1; i <= 30; i++) {
     days.push([i, date.toDateString()]);
     date.setDate(date.getDate() + 1);
+  }
+
+  let count = 1.2;
+  const parts = [1.2]
+
+  for (let i = 0; i < 23; i++) {
+    if (count + 0.6 < Math.floor(count) + 1) {
+      count += 1.1;
+    } else {
+      count += 1.7;
+    }
+    count = parseFloat(count.toFixed(1));
+    parts.push(count);
   }
 
   return (

@@ -2,32 +2,6 @@ import "./Style.css";
 import { Link } from "react-router-dom";
 
 const Fourth = () => {
-  const parts = [
-    "1.4",
-    "3.1",
-    "4.2",
-    "5.3",
-    "6.4",
-    "7.5",
-    "9.2",
-    "10.3",
-    "11.4",
-    "12.5",
-    "14.2",
-    "15.3",
-    "16.4",
-    "17.5",
-    "19.2",
-    "20.3",
-    "21.4",
-    "23.1",
-    "24.2",
-    "25.3",
-    "26.4",
-    "28.1",
-    "29.2",
-    "30.3",
-  ];
   const files = [
     "http://janathimessage.co.uk/quran/para1.pdf#page=22",
     "http://janathimessage.co.uk/quran/para3.pdf",
@@ -60,6 +34,19 @@ const Fourth = () => {
   for (let i = 1; i <= 30; i++) {
     days.push([i, date.toDateString()]);
     date.setDate(date.getDate() + 1);
+  }
+
+  let count = 1.2;
+  const parts = [1.2]
+
+  for (let i = 0; i < 23; i++) {
+    if (count + 0.6 < Math.floor(count) + 1) {
+      count += 1.1;
+    } else {
+      count += 1.7;
+    }
+    count = parseFloat(count.toFixed(1));
+    parts.push(count);
   }
 
   return (

@@ -2,32 +2,6 @@ import "./Style.css";
 import { Link } from "react-router-dom";
 
 const Third = () => {
-  const parts = [
-    "1.3",
-    "2.4",
-    "4.1",
-    "5.2",
-    "6.3",
-    "7.4",
-    "9.1",
-    "10.2",
-    "11.3",
-    "12.4",
-    "13.5",
-    "15.2",
-    "16.3",
-    "17.4",
-    "19.1",
-    "20.2",
-    "21.3",
-    "22.4",
-    "24.1",
-    "25.2",
-    "26.3",
-    "27.4",
-    "29.1",
-    "30.2",
-  ];
   const files = [
     "http://janathimessage.co.uk/quran/para1.pdf#page=15",
     "http://janathimessage.co.uk/quran/para2.pdf#page=22",
@@ -62,6 +36,19 @@ const Third = () => {
     date.setDate(date.getDate() + 1);
   }
 
+  let count = 1.2;
+  const parts = [1.2]
+
+  for (let i = 0; i < 23; i++) {
+    if (count + 0.6 < Math.floor(count) + 1) {
+      count += 1.1;
+    } else {
+      count += 1.7;
+    }
+    count = parseFloat(count.toFixed(1));
+    parts.push(count);
+  }
+
   return (
     <div>
       <div className="parent-container">
@@ -76,7 +63,7 @@ const Third = () => {
             {parts.map((part, i) => (
               <tr key={i}>
                 <td>{days[i][0]}</td>
-                <td></td>
+                <td>{part}</td>
                 <td></td>
                 <td>
                   <a href={files[i]} target="_blank">
