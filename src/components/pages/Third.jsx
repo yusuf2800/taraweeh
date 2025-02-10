@@ -36,8 +36,8 @@ const Third = () => {
     date.setDate(date.getDate() + 1);
   }
 
-  let count = 1.2;
-  const parts = [1.2]
+  let count = 1.3;
+  const parts = [1.3]
 
   for (let i = 0; i < 23; i++) {
     if (count + 0.6 < Math.floor(count) + 1) {

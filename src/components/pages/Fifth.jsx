@@ -37,8 +37,8 @@ const Fifth = () => {
     date.setDate(date.getDate() + 1);
   }
 
-  let count = 1.2;
-  const parts = [1.2]
+  let count = 2.1;
+  const parts = [2.1]
 
   for (let i = 0; i < 23; i++) {
     if (count + 0.6 < Math.floor(count) + 1) {
