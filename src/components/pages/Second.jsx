@@ -40,7 +40,7 @@ const Second = () => {
   }
 
   let count = 1.2;
-  const parts = [1.2]
+  const parts = [1.2];
 
   for (let i = 0; i < 23; i++) {
     if (count + 0.6 < Math.floor(count) + 1) {
@@ -57,24 +57,28 @@ const Second = () => {
       <div className="parent-container">
         <div className="child-container">
           <table>
-            <tr>
-              <th>Day</th>
-              <th>Part</th>
-              <th>Sides</th>
-              <th>File</th>
-            </tr>
-            {parts.map((part, i) => (
-              <tr key={i}>
-                <td>{days[i][0]}</td>
-                <td>{part}</td>
-                <td>{sides[i]}</td>
-                <td>
-                  <a href={files[i]} target="_blank">
-                    <button className="child-btn">View</button>
-                  </a>
-                </td>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Part</th>
+                <th>Sides</th>
+                <th>File</th>
               </tr>
-            ))}
+            </thead>
+            <tbody>
+              {parts.map((part, i) => (
+                <tr key={i}>
+                  <td>{days[i][0]}</td>
+                  <td>{part}</td>
+                  <td>{sides[i]}</td>
+                  <td>
+                    <a href={files[i]} target="_blank">
+                      <button className="child-btn">View</button>
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       </div>
@@ -83,15 +87,26 @@ const Second = () => {
           <svg
             className="back"
             xmlns="http://www.w3.org/2000/svg"
-            height="24px"
+            height="30px"
             viewBox="0 -960 960 960"
-            width="24px"
+            width="30px"
             fill="rgb(22, 60, 94)"
           >
             <path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
           </svg>
         </button>
       </Link>
+      <button className="timer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          width="30px"
+          height="30px"
+          fill="rgb(22, 60, 94)"
+        >
+          <path d="M256 512C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256s-114.6 256-256 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
+        </svg>
+      </button>
     </div>
   );
 };
