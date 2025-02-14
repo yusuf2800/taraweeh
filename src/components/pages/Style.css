@@ -80,7 +80,7 @@ table {
   transition: transform 0.5s ease-in-out;
 }
 
-.timer {
+.open-timer {
   border-radius: 5px;
   width: 70px;
   height: 70px;
@@ -96,9 +96,40 @@ table {
   animation: slideLeft 2s ease-in-out;
 }
 
-.timer:hover {
+.open-timer:hover {
   transform: scale(1.1);
   transition: transform 0.5s ease-in-out;
+}
+
+.timer {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  border: none;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+
+.dialog-wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.closeDialog {
+  border: none;
+  background-color: transparent;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 
 @keyframes slideUp2 {

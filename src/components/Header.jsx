@@ -1,4 +1,4 @@
-import "./Header.css"
+import "./Header.css";
 
 const Header = () => {
   const difference1 = Math.ceil(

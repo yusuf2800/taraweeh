@@ -2,33 +2,6 @@ import "./Style.css";
 import { Link } from "react-router-dom";
 
 const Fifth = () => {
-  const files = [
-    "http://janathimessage.co.uk/quran/para2.pdf#page",
-    "http://janathimessage.co.uk/quran/para3.pdf#page=7",
-    "http://janathimessage.co.uk/quran/para4.pdf#page=16",
-    "http://janathimessage.co.uk/quran/para5.pdf#page=15",
-    "http://janathimessage.co.uk/quran/para7.pdf",
-    "http://janathimessage.co.uk/quran/para8.pdf#page#page=6",
-    "http://janathimessage.co.uk/quran/para9.pdf#page=15",
-    "http://janathimessage.co.uk/quran/para10.pdf#page=22",
-    "http://janathimessage.co.uk/quran/para12.pdf",
-    "http://janathimessage.co.uk/quran/para13.pdf#page=9",
-    "http://janathimessage.co.uk/quran/para14.pdf#page=15",
-    "http://janathimessage.co.uk/quran/para15.pdf#page=22",
-    "http://janathimessage.co.uk/quran/para17.pdf",
-    "http://janathimessage.co.uk/quran/para18.pdf#page=8",
-    "http://janathimessage.co.uk/quran/para19.pdf#page=14",
-    "http://janathimessage.co.uk/quran/para20.pdf#page=19",
-    "http://janathimessage.co.uk/quran/para22.pdf",
-    "http://janathimessage.co.uk/quran/para23.pdf#page=6",
-    "http://janathimessage.co.uk/quran/para24.pdf#page=14",
-    "http://janathimessage.co.uk/quran/para25.pdf#page=22",
-    "http://janathimessage.co.uk/quran/para27.pdf",
-    "http://janathimessage.co.uk/quran/para28.pdf#page=8",
-    "http://janathimessage.co.uk/quran/para29.pdf#page=17",
-    "http://janathimessage.co.uk/quran/para30.pdf#page=22",
-  ];
-
   let days = [];
   let date = new Date("2025-02-28");
 
@@ -38,7 +11,9 @@ const Fifth = () => {
   }
 
   let count = 2.1;
+
   const parts = [2.1];
+  const files = [];
 
   for (let i = 0; i < 23; i++) {
     if (count + 0.6 < Math.floor(count) + 1) {
@@ -50,7 +25,16 @@ const Fifth = () => {
     parts.push(count);
   }
 
-  const sides = []
+  parts.forEach((part) => {
+    Number(part);
+    files.push(
+      `${import.meta.env.BASE_URL}/quran pdfs/juz${Math.floor(
+        part
+      )}/${part}.pdf`
+    );
+  });
+
+  const sides = [];
 
   return (
     <div>
@@ -96,17 +80,6 @@ const Fifth = () => {
           </svg>
         </button>
       </Link>
-      <button className="timer">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          width="30px"
-          height="30px"
-          fill="rgb(22, 60, 94)"
-        >
-          <path d="M256 512C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256s-114.6 256-256 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
-        </svg>
-      </button>
     </div>
   );
 };
