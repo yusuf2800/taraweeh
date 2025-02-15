@@ -10,27 +10,27 @@ import Fifth from "./components/pages/Fifth.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/taraweeh",
+    path: "/",
     element: <App />,
   },
   {
-    path: "/taraweeh/hb-yp",
+    path: "/hb-yp",
     element: <First />,
   },
   {
-    path: "/taraweeh/aasim",
+    path: "/aasim",
     element: <Second />,
   },
   {
-    path: "/taraweeh/wasim",
+    path: "/wasim",
     element: <Third />,
   },
   {
-    path: "/taraweeh/yoosuf",
+    path: "/yoosuf",
     element: <Fourth />,
   },
   {
-    path: "/taraweeh/shameer",
+    path: "/shameer",
     element: <Fifth />,
   },
 ]);
