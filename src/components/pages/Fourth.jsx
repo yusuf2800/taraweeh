@@ -5,7 +5,7 @@ const Fourth = () => {
   let days = [];
   let date = new Date("2025-02-28");
 
-  const sides = [];
+  const sides = ["6", "7", "9.5", "8", "6", "6", "8.5", "6", "7.5", "8.5", "7", "7", "7", "7", "8", "5", "5.5", "10", "8", "8.5", "8", "7", "9", "7"];
 
   for (let i = 1; i <= 30; i++) {
     days.push([i, date.toDateString()]);
