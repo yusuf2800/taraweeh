@@ -25,13 +25,9 @@ const Third = () => {
 
   parts.forEach((part) => {
     Number(part);
-    files.push(
-      `/quran pdfs/juz${Math.floor(
-        part
-      )}/${part}.pdf`
-    );
+    files.push(`/quran pdfs/juz${Math.floor(part)}/${part}.pdf`);
   });
-  const sides = [];
+  const sides = ["6.5", "6.5", "7", "5.5", "6", "5", "7.5", "8", "6.5", "5", "7.5", "7", "6.5", "7", "6", "8", "7", "6.5", "6", "5.5", "5", "8", "7", "7"];
 
   return (
     <div>
