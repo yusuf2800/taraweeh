@@ -26,7 +26,7 @@ const Third = () => {
   parts.forEach((part) => {
     Number(part);
     files.push(
-      `${import.meta.env.BASE_URL}/quran pdfs/juz${Math.floor(
+      `/quran pdfs/juz${Math.floor(
         part
       )}/${part}.pdf`
     );
