@@ -1,7 +1,9 @@
 import "./Style.css";
 import { Link } from "react-router-dom";
+import { getAudios } from "../../QuranApi.js";
 
 const First = () => {
+  
   const sides = [
     "8",
     "8",
@@ -51,11 +53,14 @@ const First = () => {
     parts.push(count);
   }
 
-  parts.forEach(part => {
-    Number(part) 
-    files.push(`${import.meta.env.BASE_URL}/quran pdfs/juz${Math.floor(part)}/${part}.pdf`)
-  })
-
+  parts.forEach((part) => {
+    Number(part);
+    files.push(
+      `${import.meta.env.BASE_URL}/quran pdfs/juz${Math.floor(
+        part
+      )}/${part}.pdf`
+    );
+  });
 
   return (
     <div>

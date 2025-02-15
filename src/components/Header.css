@@ -3,8 +3,7 @@
   top: 0; 
   left: 0;
   right: 0;
-  background-color: #fdf0dc;
-  opacity: 0.95;
+  background-color: rgba(252, 239, 219,0.2);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -14,7 +13,7 @@
   padding: 5px;
   position: fixed;
   z-index: 1;
-  
+  letter-spacing: .9px;
 }
 
 .header-container {

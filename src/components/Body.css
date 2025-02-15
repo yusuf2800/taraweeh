@@ -29,7 +29,7 @@ body {
   width: 250px;
   padding: 10px;
   font-weight: 700;
-  background-color: #fdf0dc;
+  background-color: rgba(253, 240, 220, 0.2);
   border: 2px solid;
   border-radius: 5px;
   cursor: pointer;
