@@ -66,7 +66,7 @@ const Fifth = () => {
           </table>
         </div>
       </div>
-      <Link key={Math.random()} to="/taraweeh">
+      <Link key={Math.random()} to="/">
         <button className="home">
           <svg
             className="back"
