@@ -1,6 +1,5 @@
 import "./Style.css";
 import { Link } from "react-router-dom";
-import { getAudios } from "../../QuranApi.js";
 
 const First = () => {
   const sides = [

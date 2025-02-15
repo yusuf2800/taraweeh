@@ -17,6 +17,9 @@ const Body = () => {
           {person.name}
         </Link>
       ))}
+      <Link className="audios" key={Math.random()} to="/audios">
+        Level Up Your Recitation
+      </Link>
     </div>
   );
 };

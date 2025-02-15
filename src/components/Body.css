@@ -1,5 +1,6 @@
 :root {
   --bg-colour: #fdecd3;
+  --bg-light-colour: rgba(253, 240, 220, 0.2);
 }
 
 * {
@@ -29,7 +30,7 @@ body {
   width: 250px;
   padding: 10px;
   font-weight: 700;
-  background-color: rgba(253, 240, 220, 0.2);
+  background-color: var(--bg-light-colour);
   border: 2px solid;
   border-radius: 5px;
   cursor: pointer;
@@ -39,7 +40,7 @@ body {
   letter-spacing: 2px;
   text-decoration: none;
   transition: background-color 0.35s ease-in-out;
-  transition: transform 0.5s ease-in-out; 
+  transition: transform 0.5s ease-in-out;
 }
 
 .child-link:hover {
@@ -64,6 +65,31 @@ body {
 
 .sa {
   animation: slideUp 2s ease-in-out;
+}
+
+.audios {
+  background-color: var(--bg-light-colour);
+  position: absolute;
+  bottom: 25px;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 10px;
+  width: 200px;
+  letter-spacing: 1px;
+  border: 2px solid;
+  transition: background-color 0.35s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  text-decoration: none;
+}
+
+.audios:hover {
+  background-color: rgba(22, 60, 94, 0.159);
+  transition: background-color 0.4s ease-in-out;
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
 }
 
 @keyframes slideUp {

@@ -7,11 +7,16 @@ import Second from "./components/pages/Second.jsx";
 import Third from "./components/pages/Third.jsx";
 import Fourth from "./components/pages/Fourth.jsx";
 import Fifth from "./components/pages/Fifth.jsx";
+import Audios from "./components/pages/Audios.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/audios",
+    element: <Audios />,
   },
   {
     path: "/hb-yp",

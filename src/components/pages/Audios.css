@@ -1,0 +1,15 @@
+:root {
+  --bg-colour: #fdecd3;
+  --bg-light-colour: rgba(253, 240, 220, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-colour);
+  font-family: Arial, sans-serif;
+}
