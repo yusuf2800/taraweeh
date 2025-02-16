@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 :root {
   --bg-colour: #fdecd3;
   --bg-light-colour: rgba(253, 240, 220, 0.2);
+  --font: "Inter";
 }
 
 * {
@@ -11,5 +14,37 @@
 
 body {
   background-color: var(--bg-colour);
-  font-family: Arial, sans-serif;
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.reciter-wrapper {
+  text-align: center;
+}
+
+.img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+@font-face {
+  font-family: "SF Arabic";
+  src: url("/SFArabic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.author {
+  font-family: var(--font);
+}
+
+.arabic {
+  font-family: "SF Arabic", sans-serif;
 }
