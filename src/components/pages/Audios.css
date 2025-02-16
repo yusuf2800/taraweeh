@@ -24,8 +24,24 @@ body {
   overflow-x: hidden;
 }
 
+.reciter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
 .reciter-wrapper {
+  padding: 10px;
   text-align: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.reciter-wrapper:hover {
+  transform: scale(1.1);
 }
 
 .img {
@@ -41,10 +57,20 @@ body {
   font-style: normal;
 }
 
+.goto-reciter {
+  text-decoration: none;
+}
+
 .author {
   font-family: var(--font);
+}
+
+.reciter-wrapper:hover .author,
+.reciter-wrapper:hover .arabic {
+  color: rgba(255, 0, 0, 0.718);
 }
 
 .arabic {
   font-family: "SF Arabic", sans-serif;
 }
+
