@@ -1,7 +1,12 @@
 import "./Style.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const First = () => {
+const First = ({ name }) => {
+  useEffect(() => {
+    document.title = name;
+  }, []);
+
   const sides = [
     "8",
     "8",

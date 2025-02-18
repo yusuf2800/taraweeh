@@ -1,7 +1,12 @@
 import "./Style.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const Fourth = () => {
+const Fourth = ({ name }) => {
+  useEffect(() => {
+    document.title = name;
+  }, []);
+
   let days = [];
   let date = new Date("2025-02-28");
 

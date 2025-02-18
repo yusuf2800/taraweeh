@@ -1,7 +1,12 @@
 import "./Style.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const Fifth = () => {
+const Fifth = ({ name }) => {
+  useEffect(() => {
+    document.title = name;
+  }, []);
+
   let days = [];
   let date = new Date("2025-02-28");
 
@@ -15,7 +20,6 @@ const Fifth = () => {
   const parts = [2.1];
   const files = [];
 
-
   for (let i = 0; i < 23; i++) {
     if (count + 0.6 < Math.floor(count) + 1) {
       count += 1.1;
@@ -28,14 +32,35 @@ const Fifth = () => {
 
   parts.forEach((part) => {
     Number(part);
-    files.push(
-      `/quran pdfs/juz${Math.floor(
-        part
-      )}/${part}.pdf`
-    );
+    files.push(`/quran pdfs/juz${Math.floor(part)}/${part}.pdf`);
   });
 
-  const sides = ["7", "8", "6", "7", "7.5", "6", "6", "6", "8", "6", "7.5", "6.5", "6", "6.5", "8", "7", "8", "5", "5.5", "8", "8", "6", "8.5", "8"];
+  const sides = [
+    "7",
+    "8",
+    "6",
+    "7",
+    "7.5",
+    "6",
+    "6",
+    "6",
+    "8",
+    "6",
+    "7.5",
+    "6.5",
+    "6",
+    "6.5",
+    "8",
+    "7",
+    "8",
+    "5",
+    "5.5",
+    "8",
+    "8",
+    "6",
+    "8.5",
+    "8",
+  ];
 
   return (
     <div>

@@ -1,7 +1,12 @@
 import "./Style.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const Third = () => {
+const Third = ({ name }) => {
+  useEffect(() => {
+    document.title = name;
+  }, []);
+
   let days = [];
   let date = new Date("2025-02-28");
 
@@ -27,7 +32,32 @@ const Third = () => {
     Number(part);
     files.push(`/quran pdfs/juz${Math.floor(part)}/${part}.pdf`);
   });
-  const sides = ["6.5", "6.5", "7", "5.5", "6", "5", "7.5", "8", "6.5", "5", "7.5", "7", "6.5", "7", "6", "8", "7", "6.5", "6", "5.5", "5", "8", "7", "7"];
+  const sides = [
+    "6.5",
+    "6.5",
+    "7",
+    "5.5",
+    "6",
+    "5",
+    "7.5",
+    "8",
+    "6.5",
+    "5",
+    "7.5",
+    "7",
+    "6.5",
+    "7",
+    "6",
+    "8",
+    "7",
+    "6.5",
+    "6",
+    "5.5",
+    "5",
+    "8",
+    "7",
+    "7",
+  ];
 
   return (
     <div>

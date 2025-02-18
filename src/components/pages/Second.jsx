@@ -1,8 +1,38 @@
 import "./Style.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const Second = () => {
-  const sides = ["7", "6.5", "7", "6.5", "7.5", "8", "5", "7", "6.5", "9", "6", "7", "5.5", "7", "7.5", "6", "7.5", "6.5", "7", "7", "10", "7", "8", "7.5"];
+const Second = ({ name }) => {
+  useEffect(() => {
+    document.title = name;
+  }, []);
+
+  const sides = [
+    "7",
+    "6.5",
+    "7",
+    "6.5",
+    "7.5",
+    "8",
+    "5",
+    "7",
+    "6.5",
+    "9",
+    "6",
+    "7",
+    "5.5",
+    "7",
+    "7.5",
+    "6",
+    "7.5",
+    "6.5",
+    "7",
+    "7",
+    "10",
+    "7",
+    "8",
+    "7.5",
+  ];
 
   let days = [];
   let date = new Date("2025-02-28");
@@ -27,11 +57,7 @@ const Second = () => {
 
   parts.forEach((part) => {
     Number(part);
-    files.push(
-      `/quran pdfs/juz${Math.floor(
-        part
-      )}/${part}.pdf`
-    );
+    files.push(`/quran pdfs/juz${Math.floor(part)}/${part}.pdf`);
   });
 
   return (

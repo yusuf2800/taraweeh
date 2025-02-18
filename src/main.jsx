@@ -20,23 +20,23 @@ const router = createBrowserRouter([
   },
   {
     path: "/hb-yp",
-    element: <First />,
+    element: <First name="Hamzah/Yusuf" />,
   },
   {
     path: "/aasim",
-    element: <Second />,
+    element: <Second name="Aasim" />,
   },
   {
     path: "/wasim",
-    element: <Third />,
+    element: <Third name="Wasim" />,
   },
   {
     path: "/yoosuf",
-    element: <Fourth />,
+    element: <Fourth name="Yoosuf" />,
   },
   {
     path: "/shameer",
-    element: <Fifth />,
+    element: <Fifth name="Shameer" />,
   },
 ]);
 
