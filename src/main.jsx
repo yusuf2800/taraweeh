@@ -8,6 +8,7 @@ import Third from "./components/pages/Third.jsx";
 import Fourth from "./components/pages/Fourth.jsx";
 import Fifth from "./components/pages/Fifth.jsx";
 import Audios from "./components/pages/Audios.jsx";
+import Alafsay from "./components/pages/Alafsay.jsx";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/shameer",
     element: <Fifth name="Shameer" />,
+  },
+  {
+    path: "/alafsay",
+    element: <Alafsay />
   },
 ]);
 
