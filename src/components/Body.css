@@ -70,7 +70,7 @@ body {
 .audios {
   background-color: var(--bg-light-colour);
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
@@ -97,7 +97,7 @@ body {
   width: 50px;
   background-color: var(--bg-light-colour);
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   right: 20px;
   height: 40px;
   font-weight: 700;
