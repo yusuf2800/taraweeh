@@ -3,41 +3,36 @@ import { Link } from "react-router-dom";
 
 const Alafsay = () => {
   const audios = [
-    {
-      id: 1,
-      name: "1.1",
-      path: "/audio/1.1.mp3",
-    },
-    {
-      id: 2,
-      name: "1.2",
-      path: "/audio/1.2.mp3",
-    },
-    {
-      id: 3,
-      name: "1.3",
-      path: "/audio/1.3.mp3",
-    },
-    {
-      id: 4,
-      name: "1.4",
-      path: "/audio/1.4.mp3",
-    },
-    {
-      id: 5,
-      name: "2.1",
-      path: "/audio/2.1.mp3",
-    },
+    
   ];
+
+  let count = 1.0;
+
+  for (let i = 1; i < 11; i++) {
+
+    if (count + 0.6 === Math.floor(count)+1) {
+      count += 0.7;
+    } else {
+      count += 0.1;
+    }
+    count = parseFloat(count.toFixed(1));
+    audios.push({
+      id: i,
+      name: count,
+      path: `/audio/juz${Math.floor(count)}/${String(count)}.mp3`
+    });
+  }
+
+  
 
   return (
     <div className="parent-container">
-      <div className="child-wrapper">
+      <div className="child-container">
         {audios.map((audio) => (
           <div className="q1-wrapper" key={audio.id}>
             <label className="q-label">{audio.name}</label>
             <audio
-              src="/audio/1.1.mp3"
+              src={audio.path}
               controls
               className="inner-audios"
             ></audio>
