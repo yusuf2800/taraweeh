@@ -8,6 +8,26 @@ const Alafsay = () => {
       name: "1.1",
       path: "/audio/1.1.mp3",
     },
+    {
+      id: 2,
+      name: "1.2",
+      path: "/audio/1.2.mp3",
+    },
+    {
+      id: 3,
+      name: "1.3",
+      path: "/audio/1.3.mp3",
+    },
+    {
+      id: 4,
+      name: "1.4",
+      path: "/audio/1.4.mp3",
+    },
+    {
+      id: 5,
+      name: "2.1",
+      path: "/audio/2.1.mp3",
+    },
   ];
 
   return (
