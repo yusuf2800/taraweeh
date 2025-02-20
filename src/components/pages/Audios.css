@@ -29,7 +29,6 @@ body {
   align-items: center;
   gap: 45px;
   flex-wrap: wrap;
-  width: 400px;
   height: 400px;
   animation: slideUp 2s ease-in-out;
   text-align: center;
@@ -38,6 +37,7 @@ body {
 .reciter-wrapper {
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  width: 200px
 }
 
 .reciter-wrapper:hover {
