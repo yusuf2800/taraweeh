@@ -2,15 +2,12 @@ import "./Alafsay.css";
 import { Link } from "react-router-dom";
 
 const Alafsay = () => {
-  const audios = [
-    
-  ];
+  const audios = [];
 
   let count = 1.0;
 
-  for (let i = 1; i < 12; i++) {
-
-    if (count + 0.6 === Math.floor(count)+1) {
+  for (let i = 1; i < 22; i++) {
+    if (count + 0.6 === Math.floor(count) + 1) {
       count += 0.7;
     } else {
       count += 0.1;
@@ -19,11 +16,21 @@ const Alafsay = () => {
     audios.push({
       id: i,
       name: count,
-      path: `/audio/juz${Math.floor(count)}/${String(count)}.mp3`
+      path: `/audio/juz${Math.floor(count)}/${String(count)}.mp3`,
     });
   }
 
-  
+  const audioElements = document.querySelectorAll(".inner-audios");
+
+  audioElements.forEach((audio) => {
+    audio.addEventListener("play", () => {
+      audioElements.forEach((other) => {
+        if (other !== audio) {
+          other.pause();
+        }
+      })
+    })
+  })
 
   return (
     <div className="parent-container">
@@ -31,11 +38,7 @@ const Alafsay = () => {
         {audios.map((audio) => (
           <div className="q1-wrapper" key={audio.id}>
             <label className="q-label">{audio.name}</label>
-            <audio
-              src={audio.path}
-              controls
-              className="inner-audios"
-            ></audio>
+            <audio src={audio.path} controls className="inner-audios"></audio>
           </div>
         ))}
       </div>
