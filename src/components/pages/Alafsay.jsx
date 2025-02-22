@@ -1,11 +1,11 @@
-import "./Alafsay.css";
+import "./Reciters.css";
 import { Link } from "react-router-dom";
 
 const Alafsay = () => {
   const audios = [];
   let count = 1.0;
 
-  for (let i = 1; i < 22; i++) {
+  for (let i = 1; i < 121; i++) {
     if (count + 0.6 === Math.floor(count) + 1) {
       count += 0.7;
     } else {

@@ -6,7 +6,7 @@ import useGoogleAnalytics from "./components/GoogleAnalytics";
 import "./App.css";
 
 const App = () => {
-  useGoogleAnalytics("G-3QJJ2L7MVD"); // Replace with your GA4 ID
+  useGoogleAnalytics("G-3QJJ2L7MVD");
 
   return (
     <div>
