@@ -42,7 +42,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/alafsay",
-    element: <Alafsay />,
+    element: <Alafsay name="Alafsay"/>,
   },
   {
     path: "/yasser",

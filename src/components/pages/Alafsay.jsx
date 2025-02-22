@@ -1,7 +1,12 @@
 import "./Reciters.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const Alafsay = () => {
+const Alafsay = ({ name }) => {
+  useEffect(() => {
+    document.title = name;
+  }, []);
+
   const audios = [];
   let count = 1.0;
 
@@ -18,7 +23,6 @@ const Alafsay = () => {
       audio_path: `/audio/juz${Math.floor(count)}/${String(count)}.mp3`,
       file_path: `/quran pdfs/juz${Math.floor(count)}/${String(count)}.pdf`,
     });
-
   }
 
   const audioElements = document.querySelectorAll(".inner-audios");
@@ -39,7 +43,11 @@ const Alafsay = () => {
         {audios.map((audio) => (
           <div className="q1-wrapper" key={audio.id}>
             <label className="q-label">{audio.name}</label>
-            <audio src={audio.audio_path} controls className="inner-audios"></audio>
+            <audio
+              src={audio.audio_path}
+              controls
+              className="inner-audios"
+            ></audio>
             <a href={audio.file_path} target="_blank">
               <button className="child-btn">Learn</button>
             </a>
