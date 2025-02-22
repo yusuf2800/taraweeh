@@ -1,17 +1,19 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { VitePluginRadar } from "vite-plugin-radar";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { VitePluginRadar } from 'vite-plugin-radar'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     VitePluginRadar({
-      // Google Analytics tag injection
-      analytics: {
-        id: "G-XXXXX",
-      },
+      analytics: [
+        {
+          id: "G-3QJJ2L7MVD", // Replace with your actual GA4 Measurement ID
+          config: {
+            send_page_view: false, // Disable automatic page views, we will track manually
+          },
+        },
+      ],
     }),
   ],
-  base: "/",
 });
