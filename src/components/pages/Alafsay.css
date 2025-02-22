@@ -18,8 +18,8 @@
 }
 
 .child-container {
-  width: min(90vw, 350px);
-  min-width: 200px;
+  width: min(90vw, 360px);
+  min-width: 250px;
   max-width: 100%;
   height: auto;
   max-height: 250px;
@@ -57,10 +57,13 @@
 }
 
 .inner-audios {
-  margin-top: 10px;
+  margin: 10px 0px 12px 0px;
   width: 285px;
-  margin-bottom: 5px;
   cursor: pointer;
+}
+
+.child-btn {
+  margin-bottom: 3px;
 }
 
 .home {

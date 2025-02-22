@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 const Alafsay = () => {
   const audios = [];
-
   let count = 1.0;
 
   for (let i = 1; i < 22; i++) {
@@ -16,8 +15,10 @@ const Alafsay = () => {
     audios.push({
       id: i,
       name: count,
-      path: `/audio/juz${Math.floor(count)}/${String(count)}.mp3`,
+      audio_path: `/audio/juz${Math.floor(count)}/${String(count)}.mp3`,
+      file_path: `/quran pdfs/juz${Math.floor(count)}/${String(count)}.pdf`,
     });
+
   }
 
   const audioElements = document.querySelectorAll(".inner-audios");
@@ -28,9 +29,9 @@ const Alafsay = () => {
         if (other !== audio) {
           other.pause();
         }
-      })
-    })
-  })
+      });
+    });
+  });
 
   return (
     <div className="parent-container">
@@ -38,7 +39,10 @@ const Alafsay = () => {
         {audios.map((audio) => (
           <div className="q1-wrapper" key={audio.id}>
             <label className="q-label">{audio.name}</label>
-            <audio src={audio.path} controls className="inner-audios"></audio>
+            <audio src={audio.audio_path} controls className="inner-audios"></audio>
+            <a href={audio.file_path} target="_blank">
+              <button className="child-btn">Learn</button>
+            </a>
           </div>
         ))}
       </div>
