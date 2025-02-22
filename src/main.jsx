@@ -11,6 +11,8 @@ import Audios from "./components/pages/Audios.jsx";
 import Alafsay from "./components/pages/Alafsay.jsx";
 
 const router = createBrowserRouter([
+
+
   {
     path: "/",
     element: <App />,
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/alafsay",
-    element: <Alafsay />
+    element: <Alafsay />,
   },
 ]);
 
