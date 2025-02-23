@@ -1,6 +1,6 @@
 import "./Style.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const First = ({ name }) => {
   useEffect(() => {
@@ -60,6 +60,9 @@ const First = ({ name }) => {
     Number(part);
     files.push(`/quran pdfs/juz${Math.floor(part)}/${part}.pdf`);
   });
+
+
+  
 
   return (
     <div>
