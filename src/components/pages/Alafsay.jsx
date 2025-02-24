@@ -20,23 +20,14 @@ const Alafsay = ({ name }) => {
     audios.push({
       id: i,
       name: count,
-      audio_path:
-        `https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${String(count)}.mp3`,
+      audio_path: `https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${String(
+        count
+      )}.mp3`,
       file_path: `/quran pdfs/juz${Math.floor(count)}/${String(count)}.pdf`,
     });
   }
 
   const audioElements = document.querySelectorAll(".inner-audios");
-
-  audioElements.forEach((audio) => {
-    audio.addEventListener("play", () => {
-      audioElements.forEach((other) => {
-        if (other !== audio) {
-          other.pause();
-        }
-      });
-    });
-  });
 
   return (
     <div className="parent-container">
@@ -48,6 +39,7 @@ const Alafsay = ({ name }) => {
               src={audio.audio_path}
               controls
               className="inner-audios"
+              preload="auto"
             ></audio>
             <a href={audio.file_path} target="_blank">
               <button className="child-btn">Learn</button>
