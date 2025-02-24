@@ -38,7 +38,6 @@ const Alafsay = ({ name }) => {
               src={audio.audio_path}
               controls
               className="inner-audios"
-              preload="auto"
             ></audio>
             <a href={audio.file_path} target="_blank">
               <button className="child-btn">Learn</button>
