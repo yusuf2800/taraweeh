@@ -27,7 +27,6 @@ const Alafsay = ({ name }) => {
     });
   }
 
-  const audioElements = document.querySelectorAll(".inner-audios");
 
   return (
     <div className="parent-container">
