@@ -11,11 +11,7 @@
 }
 
 .parent-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
+  
 }
 
 .wrapper {
@@ -24,6 +20,7 @@
   grid-gap: 12px;
   width: 90%;
   max-width: 800px;
+  place-items: center;
   animation: slideUp 2s ease-in-out;
 }
 
