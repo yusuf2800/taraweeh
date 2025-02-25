@@ -12,59 +12,40 @@
 
 .parent-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  padding: 20px;
 }
 
-.child-container {
-  width: min(90vw, 360px);
-  min-width: 250px;
-  max-width: 100%;
-  height: auto;
-  max-height: 250px;
-  overflow-y: auto;
-  border-color: white;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-  padding: 15px;
-  text-align: center;
-  margin: 20px auto;
-  font-size: 20px;
-  background-color: rgba(253, 240, 220, 0.3);
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 12px;
+  width: 90%;
+  max-width: 800px;
   animation: slideUp 2s ease-in-out;
-}
-
-.q1-wrapper {
-  width: min(90vw, 350px);
-  min-width: 200px;
-  max-width: 100%;
-  height: auto;
-  max-height: 250px;
-  border-color: white;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-  padding: 15px;
-  text-align: center;
-  margin: 20px auto;
-  font-size: 20px;
-  background-color: rgba(253, 240, 220, 0.3);
-  animation: slideUp 2s ease-in-out;
-}
-
-.q-label {
-  font-weight: 500;
-}
-
-.inner-audios {
-  margin: 10px 0px 12px 0px;
-  width: 285px;
-  cursor: pointer;
-  visibility: visible;
 }
 
 .child-btn {
-  margin-bottom: 3px;
+  width: 90px;
+  padding: 8px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.child-btn:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
 }
 
 .home {
@@ -73,17 +54,14 @@
   height: 70px;
   background-color: rgba(253, 240, 220, 0.3);
   position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 0px 20px 20px 0px;
+  bottom: 20px;
+  right: 20px;
   cursor: pointer;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border: none;
   transition: transform 0.5s ease-in-out;
-  animation: slideRight 2s ease-in-out;
 }
 
 .home:hover {
   transform: scale(1.1);
-  transition: transform 0.5s ease-in-out;
 }

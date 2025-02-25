@@ -5,45 +5,23 @@ import { useEffect } from "react";
 const Alafsay = ({ name }) => {
   useEffect(() => {
     document.title = name;
-  }, []);
+  }, [name]);
 
   const audios = [];
-  let count = 1.0;
+  const juzs = [];
 
-  for (let i = 1; i < 121; i++) {
-    if (count + 0.6 === Math.floor(count) + 1) {
-      count += 0.7;
-    } else {
-      count += 0.1;
-    }
-    count = parseFloat(count.toFixed(1));
-    audios.push({
-      id: i,
-      name: count,
-      audio_path: `https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${String(
-        count
-      )}.mp3`,
-      file_path: `/quran pdfs/juz${Math.floor(count)}/${String(count)}.pdf`,
-    });
+  for (let i = 1; i < 31; i++) {
+    juzs.push(i);
   }
 
 
   return (
     <div className="parent-container">
-      <div className="child-container">
-        {audios.map((audio) => (
-          <div className="q1-wrapper" key={audio.id}>
-            <label className="q-label">{audio.name}</label>
-            <audio
-              src={audio.audio_path}
-              controls
-              className="inner-audios"
-              
-            ></audio>
-            <a href={audio.file_path} target="_blank">
-              <button className="child-btn">Learn</button>
-            </a>
-          </div>
+      <div className="wrapper">
+        {juzs.map((juz) => (
+          <Link key={juz} className="child-btn" to={"/juz" + juz}>
+            {juz}
+          </Link>
         ))}
       </div>
       <Link key={Math.random()} to="/audios">
