@@ -8,7 +8,7 @@ const Juz10 = ({ name }) => {
   }, []);
 
   const audios = [];
-  let count = 1.0;
+  let count = 10.0;
 
   for (let i = 1; i < 5; i++) {
     if (count + 0.6 === Math.floor(count) + 1) {
