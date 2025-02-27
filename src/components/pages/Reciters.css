@@ -10,10 +10,6 @@
   box-sizing: border-box;
 }
 
-.parent-container {
-  
-}
-
 .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -37,12 +33,16 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.index {
+  transform: translate(90deg);
 }
 
 .child-btn:hover {
   transform: scale(1.05);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .home {

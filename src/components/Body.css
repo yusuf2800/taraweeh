@@ -39,15 +39,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
-  transition: background-color 0.35s ease-in-out;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .child-link:hover {
   background-color: rgba(22, 60, 94, 0.159);
-  transition: background-color 0.4s ease-in-out;
   transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .hs {

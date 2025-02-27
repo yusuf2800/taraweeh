@@ -11,16 +11,18 @@ const Alafsay = ({ name }) => {
   const juzs = [];
 
   for (let i = 1; i < 31; i++) {
-    juzs.push(i);
+    juzs.push({juz: i});
   }
 
 
   return (
     <div className="parent-container">
       <div className="wrapper">
-        {juzs.map((juz) => (
-          <Link key={juz} className="child-btn" to={"/juz" + juz}>
-            {juz}
+        {juzs.map((j) => (
+          <Link key={j.juz} className="child-btn" to={"/juz" + j.juz}>
+            <div className="index">
+              <label>{j.juz}</label>
+            </div>
           </Link>
         ))}
       </div>
