@@ -18,10 +18,10 @@ const Alafsay = ({ name }) => {
   return (
     <div className="parent-container">
       <div className="wrapper">
-        {juzs.map((j) => (
-          <Link key={j.juz} className="child-btn" to={"/juz"+j.juz}>
+        {juzs.map(({juz}, i) => (
+          <Link key={i} className="child-btn" to={"/juz"+juz}>
             <div className="index">
-              <label>{j.juz}</label>
+              <label>{juz}</label>
             </div>
           </Link>
         ))}
