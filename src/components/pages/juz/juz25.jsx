@@ -20,7 +20,7 @@ const Juz25 = ({ name }) => {
     audios.push({
       id: i,
       name: count,
-      audio_path: `https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${String(count)}.mp3`,
+      audio_path: ``,
       file_path: `/quran pdfs/juz${Math.floor(count)}/${String(count)}.pdf`,
     });
   }

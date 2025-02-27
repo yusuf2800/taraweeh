@@ -19,7 +19,7 @@ const Alafsay = ({ name }) => {
     <div className="parent-container">
       <div className="wrapper">
         {juzs.map((j) => (
-          <Link key={j.juz} className="child-btn" to={"/juz" + j.juz}>
+          <Link key={j.juz} className="child-btn" to={"/juz"+j.juz}>
             <div className="index">
               <label>{j.juz}</label>
             </div>
