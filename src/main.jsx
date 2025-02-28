@@ -38,7 +38,7 @@ import Juz25 from "./components/pages/juz/Juz25.jsx";
 import Juz26 from "./components/pages/juz/Juz26.jsx";
 import Juz27 from "./components/pages/juz/Juz27.jsx";
 import Juz28 from "./components/pages/juz/Juz28.jsx";
-import Juz29 from "./components/pages/juz/Jjuz29.jsx";
+import Juz29 from "./components/pages/juz/Juz29.jsx";
 import Juz30 from "./components/pages/juz/Juz30.jsx";
 
 const router = createBrowserRouter([
