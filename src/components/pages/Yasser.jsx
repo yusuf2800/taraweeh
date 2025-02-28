@@ -1,52 +1,28 @@
 import "./Reciters.css";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-const Yasser = () => {
+const Yasser = ({ name }) => {
+  useEffect(() => {
+    document.title = name;
+  }, [name]);
+
   const audios = [];
-  let count = 1.0;
+  const juzs = [];
 
-  for (let i = 1; i < 121; i++) {
-    if (count + 0.6 === Math.floor(count) + 1) {
-      count += 0.7;
-    } else {
-      count += 0.1;
-    }
-    count = parseFloat(count.toFixed(1));
-    audios.push({
-      id: i,
-      name: count,
-      audio_path: `/audio/juz${Math.floor(count)}/${String(count)}.mp3`,
-      file_path: `/quran pdfs/juz${Math.floor(count)}/${String(count)}.pdf`,
-    });
+  for (let i = 1; i < 31; i++) {
+    juzs.push({ juz: i });
   }
-
-  const audioElements = document.querySelectorAll(".inner-audios");
-
-  audioElements.forEach((audio) => {
-    audio.addEventListener("play", () => {
-      audioElements.forEach((other) => {
-        if (other !== audio) {
-          other.pause();
-        }
-      });
-    });
-  });
 
   return (
     <div className="parent-container">
-      <div className="child-container">
-        {audios.map((audio) => (
-          <div className="q1-wrapper" key={audio.id}>
-            <label className="q-label">{audio.name}</label>
-            <audio
-              src={audio.audio_path}
-              controls
-              className="inner-audios"
-            ></audio>
-            <a href={audio.file_path} target="_blank">
-              <button className="child-btn">Learn</button>
-            </a>
-          </div>
+      <div className="wrapper">
+        {juzs.map(({ juz }, i) => (
+          <Link key={i} className="child-btn" to={"/juzY" + juz}>
+            <div className="index">
+              <label>{juz}</label>
+            </div>
+          </Link>
         ))}
       </div>
       <Link key={Math.random()} to="/audios">

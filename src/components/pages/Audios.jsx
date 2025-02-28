@@ -13,7 +13,7 @@ const Audios = () => {
       name: "Yasser Al-Dosari",
       arabicName: "ياسر الدوسري",
       url: "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565",
-      goto: "",
+      goto: "/yasser",
     },
   ];
 
