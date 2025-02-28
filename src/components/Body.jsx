@@ -5,7 +5,7 @@ const Body = () => {
   const names = [
     { id: "hs", name: "hamzah/yusuf", path: "/hb-yp" },
     { id: "ap", name: "aasim", path: "/aasim" },
-    { id: "wm", name: "wasim", path: "/wasim" },
+    { id: "wm", name: "wasim/yasin", path: "/wm-ya" },
     { id: "ys", name: "yoosuf", path: "/yoosuf" },
     { id: "sa", name: "shameer", path: "/shameer" },
   ];
