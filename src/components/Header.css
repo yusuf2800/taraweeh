@@ -9,7 +9,6 @@
   align-items: center;
   justify-content: center;
   height: 70px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
   padding: 5px;
   position: fixed;
   z-index: 1;
