@@ -92,6 +92,7 @@ body {
 }
 
 .theme-switch {
+  display: none;
   width: 50px;
   background-color: var(--bg-light-colour);
   position: absolute;
