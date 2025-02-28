@@ -26,7 +26,7 @@ import Juz13 from "./components/pages/juz/Juz13.jsx";
 import Juz14 from "./components/pages/juz/Juz14.jsx";
 import Juz15 from "./components/pages/juz/Juz15.jsx";
 import Juz16 from "./components/pages/juz/Juz16.jsx";
-import Juz17 from "./components/pages/juz/Juz17.jsx";
+import Juz17 from "./components/pages/juz/Jjuz17.jsx";
 import Juz18 from "./components/pages/juz/Juz18.jsx";
 import Juz19 from "./components/pages/juz/Juz19.jsx";
 import Juz20 from "./components/pages/juz/Juz20.jsx";
