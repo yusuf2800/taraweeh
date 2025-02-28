@@ -10,7 +10,7 @@ export default defineConfig({
         {
           id: "G-3QJJ2L7MVD", // Replace with your actual GA4 Measurement ID
           config: {
-            send_page_view: false, // Disable automatic page views, we will track manually
+            send_page_view: true,
           },
         },
       ],
