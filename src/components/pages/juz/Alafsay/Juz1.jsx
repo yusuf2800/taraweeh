@@ -11,17 +11,12 @@ const Juz1 = ({ name }) => {
       "content",
       "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
     );
-    navigator.mediaSession.metadata = new MediaMetadata({
-      title: "Juz 1",
-      artist: "Mishary Rashid Alafsay",
-      artwork: [
-        {
-          src: "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860",
-          sizes: "512x512",
-          type: "image/jpeg",
-        },
-      ],
-    });
+    const iconLink = document.querySelector('link[rel="apple-touch-icon"]');
+
+    iconLink.setAttribute(
+      "href",
+      "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
+    ); 
   }, []);
 
   const audios = [];
