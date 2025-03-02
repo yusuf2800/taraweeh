@@ -5,6 +5,12 @@ import { useEffect } from "react";
 const YJuz14 = ({ name }) => {
   useEffect(() => {
     document.title = name;
+    let metaTag = document.querySelector('meta[property="og:image"]');
+
+    metaTag.setAttribute(
+      "content",
+      "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565"
+    );
   }, []);
 
   const audios = [];

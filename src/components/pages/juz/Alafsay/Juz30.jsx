@@ -5,6 +5,12 @@ import { useEffect } from "react";
 const Juz30 = ({ name }) => {
   useEffect(() => {
     document.title = name;
+    let metaTag = document.querySelector('meta[property="og:image"]');
+
+    metaTag.setAttribute(
+      "content",
+      "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
+    );
   }, []);
 
   const audios = [];

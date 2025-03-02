@@ -2,10 +2,15 @@ import "../Juz.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
-
 const Juz1 = ({ name }) => {
   useEffect(() => {
     document.title = name;
+    let metaTag = document.querySelector('meta[property="og:image"]');
+
+    metaTag.setAttribute(
+      "content",
+      "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
+    );
   }, []);
 
   const audios = [];
