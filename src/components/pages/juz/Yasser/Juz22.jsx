@@ -17,6 +17,11 @@ const YJuz22 = ({ name }) => {
       "href",
       "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565"
     );
+    return () => {
+      if (iconLink) {
+        iconLink.setAttribute("href", "images/mosquePreview.png");
+      }
+    };
   }, []);
 
   const audios = [];

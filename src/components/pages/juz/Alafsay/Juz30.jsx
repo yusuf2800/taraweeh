@@ -17,6 +17,11 @@ const Juz30 = ({ name }) => {
       "href",
       "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
     );
+    return () => {
+      if (iconLink) {
+        iconLink.setAttribute("href", "images/mosquePreview.png");
+      }
+    };
   }, []);
 
   const audios = [];
