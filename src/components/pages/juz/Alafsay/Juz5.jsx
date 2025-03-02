@@ -11,6 +11,12 @@ const Juz5 = ({ name }) => {
       "content",
       "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
     );
+    const iconLink = document.querySelector('link[rel="apple-touch-icon"]');
+
+    iconLink.setAttribute(
+      "href",
+      "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
+    );
   }, []);
 
   const audios = [];

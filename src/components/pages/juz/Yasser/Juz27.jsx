@@ -9,6 +9,12 @@ const YJuz27 = ({ name }) => {
 
     metaTag.setAttribute(
       "content",
+      "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
+    );
+    const iconLink = document.querySelector('link[rel="apple-touch-icon"]');
+
+    iconLink.setAttribute(
+      "href",
       "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565"
     );
   }, []);
