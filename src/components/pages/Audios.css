@@ -105,6 +105,7 @@ body {
   padding: 20px;
   border: none;
   border-radius: 7px;
+  background-color: rgb(253, 236, 211);
 }
 
 .modal::backdrop {
