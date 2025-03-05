@@ -17,6 +17,22 @@ const Audios = () => {
     },
   ];
 
+  const modal = document.querySelector(".modal");
+  const close = document.querySelector(".close");
+  const open = document.querySelector(".open-modal");
+
+  const openModal = () => {
+    open.addEventListener("click", () => {
+      modal.showModal();
+    });
+  };
+
+  const closeModal = () => {
+    close.addEventListener("click", () => {
+      modal.close();
+    });
+  };
+
   return (
     <div className="parent-container">
       <div className="reciter-container">
@@ -49,6 +65,42 @@ const Audios = () => {
           </svg>
         </button>
       </Link>
+      <button className="open-modal" onClick={openModal}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          width="30px"
+          height="30px"
+          fill="rgb(22, 60, 94)"
+        >
+          <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z" />
+        </svg>
+      </button>
+      <dialog className="modal">
+        <button className="close" onClick={closeModal}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 320 512"
+            width="15px"
+            fill="rgb(22, 60, 94)"
+          >
+            <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
+          </svg>
+        </button>
+        <p>
+          Dear users
+          <br />
+          <br />
+          More is being added
+          <br />
+          Please make sure to spread this website for more hasanat
+          <br />
+          <br />
+          <a href="mailto:yusufpatel2800@gmail.com" className="email">
+            Email me for suggestions/improvements
+          </a>
+        </p>
+      </dialog>
     </div>
   );
 };

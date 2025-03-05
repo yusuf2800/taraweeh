@@ -6,9 +6,7 @@ const Header = () => {
   );
 
   return (
-    <header className="header-container text">
-      <label className="daysLeft">
-      </label>
+    <header className="">
     </header>
   );
 };
