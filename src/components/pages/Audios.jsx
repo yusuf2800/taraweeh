@@ -94,7 +94,12 @@ const Audios = () => {
           <span className="arabic">السلام عليكم ورحمة الله وبركاته</span>
           <br />
           <br />
-          More is being added
+          This website consists of the quarters per juz with the audios
+          <br />
+          The audios are still being added
+          <br />
+          <br />
+          More reciters will be added soon 
           <br />
           Please make sure to share this website for more hasanat
           <br />
