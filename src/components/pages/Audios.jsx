@@ -105,7 +105,7 @@ const Audios = () => {
           <br />
           <br />
           <a href="mailto:yusufpatel2800@gmail.com" className="email">
-            Email me for suggestions/improvements
+            Email me for suggestions/improvements: yusufpatel2800@gmail.com
           </a>
           <br />
           <br />
