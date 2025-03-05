@@ -135,3 +135,13 @@ body {
   transition: transform 0.5s ease-in-out;
   animation: slideLeft 2s ease-in-out;
 }
+
+.email {
+  text-decoration: none;
+  font-weight: 600;
+  color: rgba(255, 0, 0, 0.718);
+}
+
+.email:hover {
+  color: rgba(247, 99, 99, 0.9);
+}

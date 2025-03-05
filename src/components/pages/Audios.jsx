@@ -104,8 +104,9 @@ const Audios = () => {
           Please make sure to share this website for more hasanat
           <br />
           <br />
+          Email me for suggestions/improvements:{" "}
           <a href="mailto:yusufpatel2800@gmail.com" className="email">
-            Email me for suggestions/improvements: yusufpatel2800@gmail.com
+            yusufpatel2800@gmail.com
           </a>
           <br />
           <br />
