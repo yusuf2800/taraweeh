@@ -271,7 +271,7 @@ const router = createBrowserRouter([
     element: <Second name="Aasim" />,
   },
   {
-    path: "/wasim",
+    path: "/wm-ya",
     element: <Third name="Wasim" />,
   },
   {

@@ -35,11 +35,7 @@ const Body = () => {
 
   const view = () => {
     if (searchQuery.trim() !== "") {
-      navigate(
-        `/https://taraweeh.netlify.app/quran%20pdfs/juz${Math.floor(
-          encodeURIComponent(searchQuery)
-        )}/${(encodeURIComponent(searchQuery))}.pdf`
-      );
+      window.open(`quran pdfs/juz${Math.floor(searchQuery)}/${searchQuery}.pdf`, "_blank");
     }
   };
 
@@ -81,6 +77,7 @@ const Body = () => {
           value={searchQuery}
           onChange={handleSearchChange}
         />
+        <br />
         <button className="view" onClick={view}>
           View
         </button>
