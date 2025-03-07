@@ -36,7 +36,9 @@ const Body = () => {
   const view = () => {
     if (searchQuery.trim() !== "") {
       window.open(`quran pdfs/juz${Math.floor(searchQuery)}/${searchQuery}.pdf`, "_blank");
+      setSearchQuery("");
     }
+
   };
 
   return (
