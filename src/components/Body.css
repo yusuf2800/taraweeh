@@ -91,28 +91,56 @@ body {
   transition: transform 0.2s ease-in-out;
 }
 
-.theme-switch {
-  display: none;
-  width: 50px;
-  background-color: var(--bg-light-colour);
-  position: absolute;
-  bottom: 30px;
-  right: 20px;
-  height: 40px;
-  font-weight: 700;
+.search {
   border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(253, 240, 220, 0.3);
+  position: fixed;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
-  font-size: 13px;
-  letter-spacing: 1px;
-  border: 2px solid;
-  transition: background-color 0.35s ease-in-out;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border: none;
   transition: transform 0.5s ease-in-out;
-  text-align: center;
-  animation: slideUp 2s ease-in-out;
+  animation: slideRight 1.5s ease-in-out;
 }
 
-.theme-switch:hover {
+.search:hover {
   transform: scale(1.1);
+}
+
+.modal-search {
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  border: 2px solid rgb(22, 60, 94);
+  border-radius: 5px;
+  margin-top: 20px;
+  padding-left: 5px;
+}
+
+.view {
+  width: 70px;
+  margin-top: 15px;
+  padding: 7px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.view:hover {
+  background-color: rgba(22, 60, 94, 0.159);
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 @keyframes slideUp {
