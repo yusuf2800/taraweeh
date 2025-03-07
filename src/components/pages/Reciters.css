@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 12px;
-  width: 90%;
+  width: 100%;
   max-width: 800px;
   place-items: center;
   animation: slideUp 2s ease-in-out;
@@ -42,7 +42,7 @@
 
 .child-btn:hover {
   transform: scale(1.05);
-  transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out;
+  transition: transform .3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .home {

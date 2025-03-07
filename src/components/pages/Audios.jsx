@@ -31,6 +31,18 @@ const Audios = () => {
       url: "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565",
       goto: "/yasser",
     },
+    {
+      name: "Abdul Rahman Al Soudais",
+      arabicName: "عبد الرحمن السديس",
+      url: "https://api2.quran-pro.com/images/abdul-rahman-al-soudais/abdul-rahman-al-soudais-medium.webp?version=1686737500276",
+      goto: "",
+    },
+    {
+      name: "Maher Al Mueaqly",
+      arabicName: "ماهر المعيقلي",
+      url: "https://api2.quran-pro.com/images/maher-al-mueaqly/maher-al-mueaqly-medium.webp?version=1686738190628",
+      goto: "",
+    },
   ];
 
   return (
