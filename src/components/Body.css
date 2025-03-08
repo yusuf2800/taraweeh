@@ -123,7 +123,7 @@ body {
 
 .view {
   width: 70px;
-  margin-top: 15px;
+  margin-top: 7px;
   padding: 7px;
   font-weight: 700;
   background-color: transparent;
@@ -186,4 +186,9 @@ body {
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.invalid {
+  color: rgba(255, 0, 0, 0.756);
+  
 }

@@ -14,6 +14,7 @@ const Body = () => {
   const modalRef = useRef(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isInvalid, setIsInvalid] = useState(false); // New state for invalid input
 
   const navigate = useNavigate();
 
@@ -27,18 +28,37 @@ const Body = () => {
   const closeModal = () => {
     modalRef.current?.close();
     setIsModalOpen(false);
+    setIsInvalid(false); // Reset error message when closing modal
   };
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
+    setIsInvalid(false); // Reset error when typing
   };
 
-  const view = () => {
-    if (searchQuery.trim() !== "") {
-      window.open(`quran pdfs/juz${Math.floor(searchQuery)}/${searchQuery}.pdf`, "_blank");
-      setSearchQuery("");
+  let count = 1.0;
+  let files = [];
+  for (let i = 1; i < 121; i++) {
+    if (count + 0.6 === Math.floor(count) + 1) {
+      count += 0.7;
+    } else {
+      count += 0.1;
     }
+    count = parseFloat(count.toFixed(1));
+    files.push(count);
+  }
 
+  const view = () => {
+    if (searchQuery.trim() !== "" && files.includes(parseFloat(searchQuery))) {
+      window.open(
+        `quran pdfs/juz${Math.floor(searchQuery)}/${searchQuery}.pdf`,
+        "_blank"
+      );
+      setSearchQuery("");
+      setIsInvalid(false); // Reset invalid state
+    } else {
+      setIsInvalid(true); // Show error message
+    }
   };
 
   return (
@@ -79,6 +99,12 @@ const Body = () => {
           value={searchQuery}
           onChange={handleSearchChange}
         />
+        <br />
+        {isInvalid && (
+          <span className="invalid">
+            You have entered an incorrect quarter!
+          </span>
+        )}
         <br />
         <button className="view" onClick={view}>
           View
