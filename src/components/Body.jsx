@@ -101,8 +101,8 @@ const Body = () => {
         <input
           ref={searchInputRef}
           type="text"
-          inputMode="numeric"
-          pattern="[0-9]*"
+          inputMode="decimal"
+          pattern="([1-9](\.\d*)?|30(\.0*)?)"
           min="1"
           max="31"
           placeholder="What do you want to read?"
