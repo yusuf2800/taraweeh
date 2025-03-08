@@ -1,6 +1,6 @@
 import "./Body.css";
-import { Link, useNavigate } from "react-router-dom";
-import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { useRef, useState, useEffect } from "react";
 
 const Body = () => {
   const names = [
@@ -12,11 +12,10 @@ const Body = () => {
   ];
 
   const modalRef = useRef(null);
+  const searchInputRef = useRef(null); // Reference for the search input
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [isInvalid, setIsInvalid] = useState(false); // New state for invalid input
-
-  const navigate = useNavigate();
+  const [isInvalid, setIsInvalid] = useState(false);
 
   const openModal = () => {
     if (!isModalOpen) {
@@ -28,12 +27,12 @@ const Body = () => {
   const closeModal = () => {
     modalRef.current?.close();
     setIsModalOpen(false);
-    setIsInvalid(false); // Reset error message when closing modal
+    setIsInvalid(false);
   };
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
-    setIsInvalid(false); // Reset error when typing
+    setIsInvalid(false);
   };
 
   let count = 1.0;
@@ -55,11 +54,18 @@ const Body = () => {
         "_blank"
       );
       setSearchQuery("");
-      setIsInvalid(false); // Reset invalid state
+      setIsInvalid(false);
     } else {
-      setIsInvalid(true); // Show error message
+      setIsInvalid(true);
     }
   };
+
+  // Focus the input when the modal opens
+  useEffect(() => {
+    if (isModalOpen && searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, [isModalOpen]);
 
   return (
     <div className="parent-container">
@@ -93,6 +99,7 @@ const Body = () => {
           </svg>
         </button>
         <input
+          ref={searchInputRef} // Attach the ref here
           type="search"
           placeholder="What do you want to read?"
           className="modal-search"
