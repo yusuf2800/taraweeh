@@ -122,7 +122,7 @@ const Body = () => {
       </dialog>
       {pdfURL && (
         <>
-          <embed
+          <iframe
             src={`quran pdfs/juz${Math.floor(pdfURL)}/${pdfURL}.pdf`}
             className="embed"
           />
