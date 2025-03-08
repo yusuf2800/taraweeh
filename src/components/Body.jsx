@@ -16,6 +16,7 @@ const Body = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isInvalid, setIsInvalid] = useState(false);
+  const [pdfURL, setPDFURL] = useState(null);
 
   const openModal = () => {
     if (!isModalOpen) {
@@ -49,18 +50,16 @@ const Body = () => {
 
   const view = () => {
     if (searchQuery.trim() !== "" && files.includes(parseFloat(searchQuery))) {
-      window.open(
-        `quran pdfs/juz${Math.floor(searchQuery)}/${searchQuery}.pdf`,
-        "_blank"
-      );
+      setPDFURL(searchQuery)
       setSearchQuery("");
       setIsInvalid(false);
+      setIsModalOpen(false)
+      closeModal();
     } else {
       setIsInvalid(true);
     }
   };
 
-  // Focus the input when the modal opens
   useEffect(() => {
     if (isModalOpen && searchInputRef.current) {
       searchInputRef.current.focus();
@@ -121,6 +120,27 @@ const Body = () => {
           View
         </button>
       </dialog>
+      {pdfURL && (
+        <>
+          <embed
+            src={`quran pdfs/juz${Math.floor(pdfURL)}/${pdfURL}.pdf`}
+            className="embed"
+          />
+          <button className="close-pdf" onClick={() => {
+            setPDFURL(null);
+            openModal();
+          }}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+              width="15px"
+              fill="rgb(22, 60, 94)"
+            >
+              <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
+            </svg>
+          </button>
+        </>
+      )}
     </div>
   );
 };
