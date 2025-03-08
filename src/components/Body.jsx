@@ -50,10 +50,10 @@ const Body = () => {
 
   const view = () => {
     if (searchQuery.trim() !== "" && files.includes(parseFloat(searchQuery))) {
-      setPDFURL(searchQuery)
+      window.open(`quran pdfs/juz${Math.floor(searchQuery)}/${searchQuery}.pdf`, "_blank");
       setSearchQuery("");
       setIsInvalid(false);
-      setIsModalOpen(false)
+      setIsModalOpen(false);
       closeModal();
     } else {
       setIsInvalid(true);
@@ -123,13 +123,18 @@ const Body = () => {
       {pdfURL && (
         <>
           <iframe
-            src={`quran pdfs/juz${Math.floor(pdfURL)}/${pdfURL}.pdf`}
+            src={`https://docs.google.com/viewer?url=${`quran pdfs/juz${Math.floor(
+              pdfURL
+            )}/${pdfURL}.pdf`}&embedded=true`}
             className="embed"
           />
-          <button className="close-pdf" onClick={() => {
-            setPDFURL(null);
-            openModal();
-          }}>
+          <button
+            className="close-pdf"
+            onClick={() => {
+              setPDFURL(null);
+              openModal();
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
