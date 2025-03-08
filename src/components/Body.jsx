@@ -100,7 +100,11 @@ const Body = () => {
         </button>
         <input
           ref={searchInputRef}
-          type="number"
+          type="text"
+          inputMode="numeric"
+          pattern="[0-9]*"
+          min="1"
+          max="31"
           placeholder="What do you want to read?"
           className="modal-search"
           value={searchQuery}
