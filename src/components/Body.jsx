@@ -99,8 +99,8 @@ const Body = () => {
           </svg>
         </button>
         <input
-          ref={searchInputRef} // Attach the ref here
-          type="search"
+          ref={searchInputRef}
+          type="number"
           placeholder="What do you want to read?"
           className="modal-search"
           value={searchQuery}
