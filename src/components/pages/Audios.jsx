@@ -143,7 +143,6 @@ const Audios = () => {
           <span className="arabic">جزاك الله خيرا</span>
         </p>
       </dialog>
-      <div className="h-[100px]"></div>
     </div>
   );
 };
