@@ -69,7 +69,7 @@ const Fifth = ({ name }) => {
           <table className="mx-auto border-separate border-spacing-x-[16px] border-spacing-y-[16px] text-[18px]">
             <thead className="sticky top-0 z-10 h-[50px] w-[100%] rounded-[8px] px-7 backdrop-blur-[10px]">
               <tr>
-                <th className="pl-[10px]">Day</th>
+                <th className="pl-[10px]">Night</th>
                 <th>Part</th>
                 <th>Sides</th>
                 <th>File</th>

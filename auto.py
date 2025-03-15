@@ -4,5 +4,7 @@ import time as t
 t.sleep(3.5)
 
 for i in range(1001):
-  py.write("looks good g")
+  py.write("")
   py.press("enter")
+  t.sleep(0.1)
+  
