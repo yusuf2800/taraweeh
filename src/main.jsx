@@ -74,7 +74,7 @@ import YJuz30 from "./components/pages/juz/Yasser/Juz30.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App/>,
   },
 
   {

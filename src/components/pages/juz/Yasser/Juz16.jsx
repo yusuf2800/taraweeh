@@ -1,4 +1,4 @@
-import "../Juz.css";
+import "../../../../App.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -9,13 +9,13 @@ const YJuz16 = ({ name }) => {
 
     metaTag.setAttribute(
       "content",
-      "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
+      "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860",
     );
     const iconLink = document.querySelector('link[rel="apple-touch-icon"]');
 
     iconLink.setAttribute(
       "href",
-      "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565"
+      "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565",
     );
     return () => {
       if (iconLink) {
@@ -43,24 +43,29 @@ const YJuz16 = ({ name }) => {
   }
 
   return (
-    <div className="parent-container">
-      <div className="child-container">
+    <div className="flex h-screen items-center justify-center bg-(--bg-color) bg-[image:var(--bg-img)]">
+      <div className="animate-slideUp h-[250px] w-[350px] overflow-y-auto rounded-[10px] bg-[var(--bg-color)] p-[15px] text-center text-[var(--color)] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]">
         {audios.map((audio) => (
-          <div className="q1-wrapper" key={audio.id}>
-            <label className="q-label">{audio.name}</label>
+          <div
+            className="animation-slideUp my-[20px] w-[100%] rounded-[7px] px-[5px] py-[15px] text-[20px] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]"
+            key={audio.id}
+          >
+            <label className="font-[500]">{audio.name}</label>
             <audio
               src={audio.audio_path}
               controls
-              className="inner-audios"
+              className="mx-auto my-[10px] w-[285px] cursor-pointer"
             ></audio>
             <a href={audio.file_path} target="_blank">
-              <button className="child-btn">Learn</button>
+              <button className="h-[40px] w-[80px] cursor-pointer rounded-[5px] border-[2px] text-[16px] font-[700] tracking-[.5px] uppercase hover:bg-[rgba(22,60,94,0.159)]">
+                Learn
+              </button>
             </a>
           </div>
         ))}
       </div>
       <Link key={Math.random()} to="/yasser">
-        <button className="home">
+        <button className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed right-[20px] bottom-[20px] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]">
           <svg
             className="back"
             xmlns="http://www.w3.org/2000/svg"

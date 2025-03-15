@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
-import "./Audios.css";
+import "../../App.css";
 
 const Audios = () => {
   const modalRef = useRef(null);
@@ -46,17 +46,24 @@ const Audios = () => {
   ];
 
   return (
-    <div className="parent-container">
-      <div className="reciter-container">
+    <div className="flex h-screen flex-col items-center justify-center gap-[15px] overflow-y-hidden bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
+      <div className="animate-slideUp flex h-[400px] flex-wrap items-center justify-center gap-[30px] text-center">
         {reciters.map((reciter, i) => (
-          <Link key={i} className="goto-reciter" to={reciter.goto}>
-            <div className="reciter-wrapper">
-              <img src={reciter.url} className="img" />
-              <div className="text-container">
-                <p className="author">
+          <Link key={i} className="decoration-none" to={reciter.goto}>
+            <div className="relative flex h-[280px] w-[250px] flex-col items-center justify-center overflow-hidden rounded-[8px] shadow-[2px_2px_15px_rgba(0,0,0,0.3)]">
+              <img
+                src={reciter.url}
+                className="absolute z-0 h-[350px] w-[320px] rounded-[8px] blur-[90px]"
+              />
+              <img
+                src={reciter.url}
+                className="z-10 mx-auto h-[150px] w-[150px] rounded-[50%] shadow-[2px_2px_15px_rgba(0,0,0,0.3)]"
+              />
+              <div className="z-10 mt-[10px] text-center">
+                <p className="hover:text-[rgba(255,0,0,0.52)] text-[17px] font-[500] text-(--color)">
                   {reciter.name}
                   <br />
-                  <span className="author arabic">{reciter.arabicName}</span>
+                  {reciter.arabicName}
                 </p>
               </div>
             </div>
@@ -65,7 +72,7 @@ const Audios = () => {
       </div>
 
       <Link key="100" to="/">
-        <button className="home">
+        <button className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed right-[20px] bottom-[20px] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]">
           <svg
             className="back"
             xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +86,10 @@ const Audios = () => {
         </button>
       </Link>
 
-      <button className="open-modal" onClick={openModal}>
+      <button
+        className="animate-slideLeft bg-[rgba(253, 240, 220, 0.3)] fixed bottom-[20px] left-[20px] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]"
+        onClick={openModal}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
@@ -91,8 +101,14 @@ const Audios = () => {
         </svg>
       </button>
 
-      <dialog ref={modalRef} className="modal">
-        <button className="close" onClick={closeModal}>
+      <dialog
+        ref={modalRef}
+        className="backdrop:[rgba(0,0,0,0.9)] overlay top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rounded-[7px] bg-[var(--bg-color)] p-[20px] text-(--color)"
+      >
+        <button
+          className="fixed top-[10px] right-[10px] cursor-pointer"
+          onClick={closeModal}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 320 512"
@@ -103,7 +119,7 @@ const Audios = () => {
           </svg>
         </button>
         <p>
-          <span className="arabic">السلام عليكم ورحمة الله وبركاته</span>
+          السلام عليكم ورحمة الله وبركاته
           <br />
           <br />
           This website consists of the quarters per juz with the audios
@@ -117,7 +133,10 @@ const Audios = () => {
           <br />
           <br />
           Email me for suggestions/improvements:{" "}
-          <a href="mailto:yusufpatel2800@gmail.com" className="email">
+          <a
+            href="mailto:yusufpatel2800@gmail.com"
+            className="font-[600] text-red-500"
+          >
             yusufpatel2800@gmail.com
           </a>
           <br />

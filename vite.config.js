@@ -1,14 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { VitePluginRadar } from 'vite-plugin-radar'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { VitePluginRadar } from "vite-plugin-radar";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     VitePluginRadar({
       analytics: [
         {
-          id: "G-3QJJ2L7MVD", // Replace with your actual GA4 Measurement ID
+          id: "G-3QJJ2L7MVD",
           config: {
             send_page_view: true,
           },

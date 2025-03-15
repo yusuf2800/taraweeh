@@ -1,6 +1,6 @@
-import "./Reciters.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import "../../App.css";
 
 const Alafsay = ({ name }) => {
   useEffect(() => {
@@ -11,15 +11,18 @@ const Alafsay = ({ name }) => {
   const juzs = [];
 
   for (let i = 1; i < 31; i++) {
-    juzs.push({juz: i});
+    juzs.push({ juz: i });
   }
 
-
   return (
-    <div className="parent-container">
-      <div className="wrapper">
-        {juzs.map(({juz}, i) => (
-          <Link key={i} className="child-btn" to={"/juz"+juz}>
+    <div className="flex h-screen items-center justify-center bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color) overflow-y-hidden">
+      <div className="animate-slideUp grid w-[100%] max-w-[800px] grid-cols-[repeat(auto-fill,_minmax(100px,_1fr))] place-items-center gap-[12px]">
+        {juzs.map(({ juz }, i) => (
+          <Link
+            key={i}
+            className="w-[90px] rounded-[6px] border-[2px] bg-transparent p-[8px] text-center font-[700] tracking-[2px] uppercase"
+            to={"/juz" + juz}
+          >
             <div className="index">
               <label>{juz}</label>
             </div>
@@ -27,7 +30,7 @@ const Alafsay = ({ name }) => {
         ))}
       </div>
       <Link key={Math.random()} to="/audios">
-        <button className="home">
+        <button className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed right-[20px] bottom-[20px] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]">
           <svg
             className="back"
             xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,6 @@
-import "./Style.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import "../../App.css";
 
 const Third = ({ name }) => {
   useEffect(() => {
@@ -61,12 +61,12 @@ const Third = ({ name }) => {
 
   return (
     <div>
-      <div className="parent-container">
-        <div className="child-container">
-          <table>
-            <thead>
+      <div className="flex h-screen items-center justify-center bg-(--bg-color) bg-[image:var(--bg-img)]">
+        <div className="animate-slideUp h-[250px] w-[350px] overflow-y-auto rounded-[10px] bg-[var(--bg-color)] p-[15px] text-center text-[var(--color)] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]">
+          <table className="mx-auto border-separate border-spacing-x-[16px] border-spacing-y-[16px] text-[18px]">
+            <thead className="sticky top-0 z-10 h-[50px] w-[100%] rounded-[8px] px-7 backdrop-blur-[10px]">
               <tr>
-                <th>Day</th>
+                <th className="pl-[10px]">Day</th>
                 <th>Part</th>
                 <th>Sides</th>
                 <th>File</th>
@@ -80,7 +80,9 @@ const Third = ({ name }) => {
                   <td>{sides[i]}</td>
                   <td>
                     <a href={files[i]} target="_blank">
-                      <button className="child-btn">View</button>
+                      <button className="h-[40px] w-[80px] cursor-pointer rounded-[5px] border-[2px] text-[16px] font-[700] uppercase hover:bg-[rgba(22,60,94,0.159)]">
+                        View
+                      </button>
                     </a>
                   </td>
                 </tr>
@@ -90,7 +92,7 @@ const Third = ({ name }) => {
         </div>
       </div>
       <Link key={Math.random()} to="/">
-        <button className="home">
+        <button className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed right-[20px] bottom-[20px] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]">
           <svg
             className="back"
             xmlns="http://www.w3.org/2000/svg"
