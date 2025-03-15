@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <>
-      <Body className="" name="Home"/>
+      <Body className="bg-(--bg-color)" name="Home"/>
     </>
   );
 };

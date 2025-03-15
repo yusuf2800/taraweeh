@@ -46,7 +46,7 @@ const Audios = () => {
   ];
 
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-[15px] overflow-y-hidden bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
+    <div className="flex h-screen flex-col items-center justify-center gap-[15px] bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
       <div className="animate-slideUp flex h-[400px] flex-wrap items-center justify-center gap-[30px] text-center">
         {reciters.map((reciter, i) => (
           <Link key={i} className="decoration-none" to={reciter.goto}>
