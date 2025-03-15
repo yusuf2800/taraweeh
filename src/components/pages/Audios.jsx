@@ -46,7 +46,7 @@ const Audios = () => {
   ];
 
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-[15px] bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-[15px] overflow-y-auto bg-[var(--bg-color)] bg-[image:var(--bg-img)] pb-[100px]">
       <div className="animate-slideUp flex h-[400px] flex-wrap items-center justify-center gap-[30px] text-center">
         {reciters.map((reciter, i) => (
           <Link key={i} className="decoration-none" to={reciter.goto}>
@@ -60,7 +60,7 @@ const Audios = () => {
                 className="z-10 mx-auto h-[150px] w-[150px] rounded-[50%] shadow-[2px_2px_15px_rgba(0,0,0,0.3)]"
               />
               <div className="z-10 mt-[10px] text-center">
-                <p className="hover:text-[rgba(255,0,0,0.52)] text-[17px] font-[500] text-(--color)">
+                <p className="text-[17px] font-[500] text-(--color) hover:text-[rgba(255,0,0,0.52)]">
                   {reciter.name}
                   <br />
                   {reciter.arabicName}
@@ -70,7 +70,6 @@ const Audios = () => {
           </Link>
         ))}
       </div>
-
       <Link key="100" to="/">
         <button className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed right-[20px] bottom-[20px] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]">
           <svg
@@ -144,6 +143,7 @@ const Audios = () => {
           <span className="arabic">جزاك الله خيرا</span>
         </p>
       </dialog>
+      <div className="h-[100px]"></div>
     </div>
   );
 };
