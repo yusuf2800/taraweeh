@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "host": "vite --host"
   },
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",

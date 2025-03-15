@@ -9,22 +9,94 @@ const Alafsay = ({ name }) => {
 
   const audios = [];
   const juzs = [];
+  const names = [
+    "",
+    "آلم",
+    "سَيَقُولُ",
+    "تِلْكَ ٱلْرُّسُلُ",
+    "لَنْ تَنَالُوْ الْبِرَّ",
+    "وَٱلْمُحْصَنَاتُ",
+    "لَا يُحِبُّ ٱللهُ",
+    "وَإِذَا سَمِعُوا",
+    "وَلَوْ أَنَّنَا",
+    "قَالَ ٱلْمَلَأُ",
+    "وَٱعْلَمُواْ",
+    "يَعْتَذِرُونَ",
+    "وَمَا مِنْ دَآبَّةٍ",
+    "وَمَا أُبَرِّئُ",
+    "رُبَمَا",
+    "سُبْحَانَ ٱلَّذِى",
+    "قَالَ أَلَمْ",
+    "ٱقْتَرَبَ لِلْنَّاسِ",
+    "قَدْ أَفْلَحَ",
+    "وَقَالَ ٱلَّذِينَ",
+    "أَمَّنْ خَلَقَ",
+    "أُتْلُ مَاأُوْحِیَ",
+    "وَمَنْ يَّقْنُتْ",
+    "وَمَآ لي",
+    "فَمَنْ أَظْلَمُ",
+    "إِلَيْهِ يُرَدُّ",
+    "حم",
+    "قَالَ فَمَا خَطْبُكُم",
+    "قَدْ سَمِعَ ٱللهُ",
+    "تَبَارَكَ ٱلَّذِى",
+    "عَمَّ",
+  ];
+  const ayahs = [
+    "",
+    141,
+    141,
+    200,
+    135,
+    120,
+    165,
+    119,
+    121,
+    113,
+    109,
+    123,
+    111,
+    118,
+    142,
+    121,
+    131,
+    111,
+    131,
+    118,
+    130,
+    125,
+    112,
+    117,
+    121,
+    133,
+    126,
+    130,
+    141,
+    118,
+    37,
+  ];
 
   for (let i = 1; i < 31; i++) {
-    juzs.push({ juz: i });
+    juzs.push({ juz: i, name: names[i], ayah: ayahs[i] });
   }
 
   return (
-    <div className="flex h-screen items-center justify-center bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color) overflow-y-hidden">
-      <div className="animate-slideUp grid w-[100%] max-w-[800px] grid-cols-[repeat(auto-fill,_minmax(100px,_1fr))] place-items-center gap-[12px]">
-        {juzs.map(({ juz }, i) => (
+    <div className="flex h-screen justify-center overflow-y-auto bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color)">
+      <div className="animate-slideUp my-[15px] grid w-screen grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] place-items-center gap-[12px] gap-x-[90px] pb-[50px] px-[10px]">
+        {juzs.map(({ juz, name, ayah }, i) => (
           <Link
             key={i}
-            className="w-[90px] rounded-[6px] border-[2px] bg-transparent p-[8px] text-center font-[700] tracking-[2px] uppercase"
+            className="relative flex h-[70px] w-[350px] min-w-[200px] rounded-[6px] border-[2px] bg-transparent p-[8px] font-[700]"
             to={"/juz" + juz}
           >
-            <div className="index">
-              <label>{juz}</label>
+            <div className="relative flex w-full">
+              <div className="my-auto ml-[5px] flex h-[40px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">
+                <label className="-rotate-45">{juz}</label>
+              </div>
+              <div className="mr-[10px] flex w-full flex-col items-end justify-end">
+                <label>{name}</label>
+                <label className="uppercase">{ayah} Ayahs</label>
+              </div>
             </div>
           </Link>
         ))}
