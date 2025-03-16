@@ -90,7 +90,7 @@ const Alafsay = ({ name }) => {
             to={"/juz" + juz}
           >
             <div className="relative flex w-full">
-              <div className="my-auto ml-[5px] flex h-[40px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">
+              <div className="my-auto ml-[5px] flex h-[50px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">
                 <label className="-rotate-45">{juz}</label>
               </div>
               <div className="my-auto mr-[10px] flex w-full flex-col items-end justify-end">
