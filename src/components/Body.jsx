@@ -74,9 +74,7 @@ const Body = () => {
   }, [isModalOpen]);
 
   return (
-    <div
-      className="flex h-screen flex-col items-center justify-center gap-[15px] overflow-y-hidden bg-[var(--bg-color)] bg-[image:var(--bg-img)]"
-    >
+    <div className="flex h-screen flex-col items-center justify-center gap-[15px] overflow-y-hidden bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
       {names.map((person, i) => (
         <Link
           key={i}
@@ -143,38 +141,12 @@ const Body = () => {
         )}
         <br />
         <button
-          className="cursor-pointer rounded-[5px] border-[2px] border-[var(--color)] p-[5px] text-[16px] font-[650] tracking-[1px] text-[var(--color)] uppercase"
+          className="cursor-pointer rounded-[5px] border-[2px] border-[var(--color)] p-[5px] text-[16px] font-[650] tracking-[1px] text-[var(--color)] uppercase mt-[3px]"
           onClick={view}
         >
           View
         </button>
       </dialog>
-      {pdfURL && (
-        <>
-          <iframe
-            src={`https://docs.google.com/viewer?url=${`quran pdfs/juz${Math.floor(
-              pdfURL,
-            )}/${pdfURL}.pdf`}&embedded=true`}
-            className="embed"
-          />
-          <button
-            className="close-pdf"
-            onClick={() => {
-              setPDFURL(null);
-              openModal();
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 320 512"
-              width="15px"
-              fill="rgb(22, 60, 94)"
-            >
-              <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z" />
-            </svg>
-          </button>
-        </>
-      )}
     </div>
   );
 };
