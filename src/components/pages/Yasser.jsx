@@ -90,7 +90,7 @@ const Yasser = ({ name }) => {
             to={"/juzY" + juz}
           >
             <div className="relative flex w-full">
-              <div className="my-auto ml-[5px] flex h-[50px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">
+              <div className="my-auto ml-[5px] flex h-[39px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">
                 <label className="-rotate-45">{juz}</label>
               </div>
               <div className="mr-[10px] my-auto flex w-full flex-col items-end justify-end">
