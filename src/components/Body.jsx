@@ -137,7 +137,7 @@ const Body = () => {
         />
         <br />
         {isInvalid && (
-          <span className="invalid">
+          <span className="text-red-600">
             You have entered an incorrect quarter!
           </span>
         )}
