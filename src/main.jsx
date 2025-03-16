@@ -70,140 +70,144 @@ import YJuz27 from "./components/pages/juz/Yasser/Juz27.jsx";
 import YJuz28 from "./components/pages/juz/Yasser/Juz28.jsx";
 import YJuz29 from "./components/pages/juz/Yasser/Juz29.jsx";
 import YJuz30 from "./components/pages/juz/Yasser/Juz30.jsx";
+import PDFViewer from "./components/pages/PDFViewer.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
   },
-
+  {
+    path: "/pdf",
+    element: <PDFViewer />,
+  },
   {
     path: "/audios",
     element: <Audios />,
   },
   {
     path: "/juzY1",
-    element: <YJuz1 name="Juz 1"/>,
+    element: <YJuz1 name="Juz 1" />,
   },
   {
     path: "/juzY2",
-    element: <YJuz2 name="Juz 2"/>,
+    element: <YJuz2 name="Juz 2" />,
   },
   {
     path: "/juzY3",
-    element: <YJuz3 name="Juz 3"/>,
+    element: <YJuz3 name="Juz 3" />,
   },
   {
     path: "/juzY4",
-    element: <YJuz4 name="Juz 4"/>,
+    element: <YJuz4 name="Juz 4" />,
   },
   {
     path: "/juzY5",
-    element: <YJuz5 name="Juz 5"/>,
+    element: <YJuz5 name="Juz 5" />,
   },
   {
     path: "/juzY6",
-    element: <YJuz6 name="Juz 6"/>,
+    element: <YJuz6 name="Juz 6" />,
   },
   {
     path: "/juzY7",
-    element: <YJuz7 name="Juz 7"/>,
+    element: <YJuz7 name="Juz 7" />,
   },
   {
     path: "/juzY8",
-    element: <YJuz8 name="Juz 8"/>,
+    element: <YJuz8 name="Juz 8" />,
   },
   {
     path: "/juzY9",
-    element: <YJuz9 name="Juz 9"/>,
+    element: <YJuz9 name="Juz 9" />,
   },
   {
     path: "/juzY10",
-    element: <YJuz10 name="Juz 10"/>,
+    element: <YJuz10 name="Juz 10" />,
   },
   {
     path: "/juzY11",
-    element: <YJuz11 name="Juz 11"/>,
+    element: <YJuz11 name="Juz 11" />,
   },
   {
     path: "/juzY12",
-    element: <YJuz12 name="Juz 12"/>,
+    element: <YJuz12 name="Juz 12" />,
   },
   {
     path: "/juzY13",
-    element: <YJuz13 name="Juz 13"/>,
+    element: <YJuz13 name="Juz 13" />,
   },
   {
     path: "/juzY14",
-    element: <YJuz14 name="Juz 14"/>,
+    element: <YJuz14 name="Juz 14" />,
   },
   {
     path: "/juzY15",
-    element: <YJuz15 name="Juz 15"/>,
+    element: <YJuz15 name="Juz 15" />,
   },
   {
     path: "/juzY16",
-    element: <YJuz16 name="Juz 16"/>,
+    element: <YJuz16 name="Juz 16" />,
   },
   {
     path: "/juzY17",
-    element: <YJuz17 name="Juz 17"/>,
+    element: <YJuz17 name="Juz 17" />,
   },
   {
     path: "/juzY18",
-    element: <YJuz18 name="Juz 18"/>,
+    element: <YJuz18 name="Juz 18" />,
   },
   {
     path: "/juzY19",
-    element: <YJuz19 name="Juz 19"/>,
+    element: <YJuz19 name="Juz 19" />,
   },
   {
     path: "/juzY20",
-    element: <YJuz20 name="Juz 20"/>,
+    element: <YJuz20 name="Juz 20" />,
   },
   {
     path: "/juzY21",
-    element: <YJuz21 name="Juz 21"/>,
+    element: <YJuz21 name="Juz 21" />,
   },
   {
     path: "/juzY22",
-    element: <YJuz22 name="Juz 22"/>,
+    element: <YJuz22 name="Juz 22" />,
   },
   {
     path: "/juzY23",
-    element: <YJuz23 name="Juz 23"/>,
+    element: <YJuz23 name="Juz 23" />,
   },
   {
     path: "/juzY24",
-    element: <YJuz24 name="Juz 24"/>,
+    element: <YJuz24 name="Juz 24" />,
   },
   {
     path: "/juzY25",
-    element: <YJuz25 name="Juz 25"/>,
+    element: <YJuz25 name="Juz 25" />,
   },
   {
     path: "/juzY26",
-    element: <YJuz26 name="Juz 26"/>,
+    element: <YJuz26 name="Juz 26" />,
   },
   {
     path: "/juzY27",
-    element: <YJuz27 name="Juz 27"/>,
+    element: <YJuz27 name="Juz 27" />,
   },
   {
     path: "/juzY28",
-    element: <YJuz28 name="Juz 28"/>,
+    element: <YJuz28 name="Juz 28" />,
   },
   {
     path: "/juzY29",
-    element: <YJuz29 name="Juz 29"/>,
+    element: <YJuz29 name="Juz 29" />,
   },
   {
     path: "/juzY30",
-    element: <YJuz30 name="Juz 30"/>,
+    element: <YJuz30 name="Juz 30" />,
   },
   {
     path: "/yasser",
-    element: <Yasser name="Yasser"/>,
+    element: <Yasser name="Yasser" />,
   },
   {
     path: "/juz1",
