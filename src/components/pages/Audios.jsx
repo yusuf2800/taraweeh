@@ -46,8 +46,8 @@ const Audios = () => {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-[15px] overflow-y-auto bg-[var(--bg-color)] bg-[image:var(--bg-img)] pb-[100px]">
-      <div className="animate-slideUp flex h-[400px] flex-wrap items-center justify-center gap-[30px] text-center">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-[15px] overflow-y-auto bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
+      <div className="animate-slideUp my-[25px] flex h-auto flex-wrap items-center justify-center gap-[30px] text-center">
         {reciters.map((reciter, i) => (
           <Link key={i} className="decoration-none" to={reciter.goto}>
             <div className="relative flex h-[280px] w-[250px] flex-col items-center justify-center overflow-hidden rounded-[8px] shadow-[2px_2px_15px_rgba(0,0,0,0.3)]">
@@ -55,12 +55,13 @@ const Audios = () => {
                 src={reciter.url}
                 className="absolute z-0 h-[350px] w-[320px] rounded-[8px] blur-[90px]"
               />
-              <img
-                src={reciter.url}
-                className="z-10 mx-auto h-[150px] w-[150px] rounded-[50%] shadow-[2px_2px_15px_rgba(0,0,0,0.3)]"
-              />
-              <div className="z-10 mt-[10px] text-center">
-                <p className="text-[17px] font-[500] text-(--color) hover:text-[rgba(255,0,0,0.52)]">
+
+              <div className="z-10 mt-[10px] text-center hover:text-red-500/50 active:scale-[0.95]">
+                <img
+                  src={reciter.url}
+                  className="z-10 mx-auto h-[150px] w-[150px] rounded-[50%] shadow-[2px_2px_15px_rgba(0,0,0,0.3)] active:scale-[0.95]"
+                />
+                <p className="mt-[5px] text-[17px] font-[500] text-(--color) hover:text-red-500/70">
                   {reciter.name}
                   <br />
                   {reciter.arabicName}

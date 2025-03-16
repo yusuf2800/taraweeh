@@ -81,8 +81,8 @@ const Alafsay = ({ name }) => {
   }
 
   return (
-    <div className="flex h-screen justify-center overflow-y-auto bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color)">
-      <div className="animate-slideUp my-[15px] grid w-screen grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] place-items-center gap-[12px] gap-x-[90px] pb-[50px] px-[10px]">
+    <div className="flex min-h-screen justify-center overflow-y-auto bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color)">
+      <div className="animate-slideUp grid w-screen grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] place-items-center gap-[12px] gap-x-[90px] my-[25px]">
         {juzs.map(({ juz, name, ayah }, i) => (
           <Link
             key={i}

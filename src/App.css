@@ -1,22 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&display=swap');
 @import "tailwindcss";
 
 :root {
   --bg-color: rgb(253, 236, 211);
   --color: rgb(22, 60, 94);
-  --font: "roboto", cursive;
+  --font: "roboto", "cairo";
   --bg-img: url("https://firebasestorage.googleapis.com/v0/b/mazjid-a37fd.appspot.com/o/mazjid-a37fd%2Fassets%2Fimg%2Ftile1.svg?alt=media");
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--bg-color) var(--bg-img);
 }
 
 .overlay::backdrop {
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
   backdrop-filter: blur(
     10px
-  ); /* Optional: Adds a blur effect to the backdrop */
+  );
 }
 
 .animate-slideUp {

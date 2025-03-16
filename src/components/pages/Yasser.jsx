@@ -81,8 +81,8 @@ const Yasser = ({ name }) => {
   }
 
   return (
-    <div className="flex h-screen justify-center overflow-y-auto bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color)">
-      <div className="animate-slideUp my-[15px] grid w-screen grid-cols-[repeat(auto-fill,_minmax(280px,_1fr))] place-items-center gap-[12px] gap-x-[90px] px-[10px] pb-[50px]">
+    <div className="flex min-h-screen justify-center overflow-y-auto bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color)">
+      <div className="animate-slideUp my-[25px] grid w-screen grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] place-items-center gap-[12px] gap-x-[90px]">
         {juzs.map(({ juz, name, ayah }, i) => (
           <Link
             key={i}
