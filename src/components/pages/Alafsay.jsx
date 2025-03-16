@@ -82,7 +82,7 @@ const Alafsay = ({ name }) => {
 
   return (
     <div className="flex min-h-screen justify-center overflow-y-auto bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color)">
-      <div className="animate-slideUp grid w-screen grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] place-items-center gap-[12px] gap-x-[90px] my-[25px]">
+      <div className="animate-slideUp my-[25px] grid w-screen grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] place-items-center gap-[12px] gap-x-[90px]">
         {juzs.map(({ juz, name, ayah }, i) => (
           <Link
             key={i}
@@ -93,9 +93,9 @@ const Alafsay = ({ name }) => {
               <div className="my-auto ml-[5px] flex h-[40px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">
                 <label className="-rotate-45">{juz}</label>
               </div>
-              <div className="mr-[10px] flex w-full flex-col items-end justify-end">
-                <label>{name}</label>
-                <label className="uppercase">{ayah} Ayahs</label>
+              <div className="my-auto mr-[10px] flex w-full flex-col items-end justify-end">
+                <label className="text-[19px] font-[500]">{name}</label>
+                <label className="text-[11px] uppercase">{ayah} Ayahs</label>
               </div>
             </div>
           </Link>
