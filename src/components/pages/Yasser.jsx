@@ -93,9 +93,9 @@ const Yasser = ({ name }) => {
               <div className="my-auto ml-[5px] flex h-[40px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">
                 <label className="-rotate-45">{juz}</label>
               </div>
-              <div className="mr-[10px] flex w-full flex-col items-end justify-end">
-                <label>{name}</label>
-                <label className="uppercase">{ayah} Ayahs</label>
+              <div className="mr-[10px] my-auto flex w-full flex-col items-end justify-end">
+                <label className="text-[19px] font-[500]">{name}</label>
+                <label className="uppercase text-[11px]">{ayah} Ayahs</label>
               </div>
             </div>
           </Link>
