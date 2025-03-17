@@ -82,20 +82,24 @@ const Alafsay = ({ name }) => {
 
   return (
     <div className="flex min-h-screen justify-center overflow-y-auto bg-(--bg-color) bg-[image:var(--bg-img)] text-(--color)">
-      <div className="mx-[30px] animate-slideUp my-[25px] grid w-screen grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] place-items-center gap-[12px] gap-x-[90px]">
+      <div className="animate-slideUp mx-[10px] my-[25px] grid w-screen auto-rows-fr grid-cols-2 place-items-center gap-[10px] md:grid-cols-3">
         {juzs.map(({ juz, name, ayah }, i) => (
           <Link
             key={i}
-            className="relative flex h-[70px] w-[100%] min-w-[200px] max-w-[600px] rounded-[6px] border-[2px] bg-transparent p-[8px] font-[700]"
+            className="relative flex h-[70px] w-[100%] rounded-[6px] border-[2px] bg-transparent p-[8px] font-[700]"
             to={"/juz" + juz}
           >
             <div className="relative flex w-full justify-between">
               <div className="my-auto ml-[5px] flex h-[42px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">
-                <label className="-rotate-45">{juz}</label>
+                <label className="-rotate-45 cursor-pointer">{juz}</label>
               </div>
               <div className="my-auto mr-[10px] flex w-full flex-col items-end justify-end">
-                <label className="text-[19px] font-[500]">{name}</label>
-                <label className="text-[11px] uppercase">{ayah} Ayahs</label>
+                <label className="cursor-pointer text-[19px] font-[500]">
+                  {name}
+                </label>
+                <label className="cursor-pointer text-[11px] uppercase">
+                  {ayah} Ayahs
+                </label>
               </div>
             </div>
           </Link>
