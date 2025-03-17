@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import * as pdfjsLib from "pdfjs-dist";
 import "pdfjs-dist/build/pdf.worker.entry"; // Required for worker support
 
-const pdfUrl = "/quran pdfs/juz1/1.1.pdf"; // Your PDF URL
+const pdfUrl = "/quran pdfs/juz1/1.1.pdf";
 
 const PDFViewer = () => {
   const [pdf, setPdf] = useState(null);
@@ -28,7 +28,7 @@ const PDFViewer = () => {
     // Get the page's rotation property
 
     // Define the viewport with correct scale and rotation
-    const scale = 0.8; // Adjust this scale as needed
+    const scale = 0.9; // Adjust this scale as needed
     const viewport = page.getViewport({ scale, rotation: 180 });
 
     const canvas = canvasRef.current;
@@ -36,7 +36,6 @@ const PDFViewer = () => {
     canvas.width = viewport.width;
     canvas.height = viewport.height;
 
-    // Render the page on the canvas
     page.render({ canvasContext: context, viewport });
   };
 
@@ -57,28 +56,29 @@ const PDFViewer = () => {
   };
 
   return (
-    <div className="flex flex-col items-center space-y-4 p-4">
+    <div className="flex flex-col items-center">
       <canvas
         ref={canvasRef}
-        className="h-auto max-w-full rotate-180 rounded-sm border shadow-lg"
+        className="h-[91.5vh] max-w-full rotate-180 rounded-sm border shadow-lg"
       />
 
-      <footer className="w-full flex justify-center">
-        <button
-          onClick={handlePrev}
-          className="rounded-lg bg-blue-500 px-4 py-2 text-white disabled:bg-gray-400"
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
+      <footer className="fixed bottom-0 flex h-[50px] w-full justify-center border-t-2 bg-(--bg-color) border-(--color)">
         <button
           onClick={handleNext}
-          className="rounded-lg bg-blue-500 px-4 py-2 text-white disabled:bg-gray-400"
+          className="mx-[10px] my-[2px] w-[90px] rounded-lg border-2 font-[600] text-(--color)"
           disabled={currentPage === numPages}
         >
           Next
         </button>
-        <p className="text-lg font-semibold">
+        <button
+          onClick={handlePrev}
+          className="mx-[5px]  my-[2px] w-[90px] rounded-lg border-2 font-[600] text-(--color)"
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+
+        <p className="text-lg font-semibold my-auto text-(--color) ml-[5px]">
           Page {currentPage} of {numPages}
         </p>
       </footer>
