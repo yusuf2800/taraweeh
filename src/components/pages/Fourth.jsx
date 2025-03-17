@@ -80,7 +80,7 @@ const Fourth = ({ name }) => {
                   <td>{part}</td>
                   <td>{sides[i]}</td>
                   <td>
-                    <a href={files[i]} target="_blank">
+                    <a href={files[i]}>
                       <button className="h-[40px] w-[80px] cursor-pointer rounded-[5px] border-[2px] text-[16px] font-[700] uppercase hover:bg-[rgba(22,60,94,0.159)]">
                         View
                       </button>

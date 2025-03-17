@@ -53,7 +53,7 @@ const Juz19 = ({ name }) => {
               controls
               className="mx-auto my-[10px] w-[285px] cursor-pointer"
             ></audio>
-            <a href={audio.file_path} target="_blank">
+            <a href={audio.file_path}>
               <button className="h-[40px] w-[80px] cursor-pointer rounded-[5px] border-[2px] text-[16px] font-[700] tracking-[.5px] uppercase hover:bg-[rgba(22,60,94,0.159)]">
                 Learn
               </button>
