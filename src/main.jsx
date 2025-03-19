@@ -70,16 +70,11 @@ import YJuz27 from "./components/pages/juz/Yasser/Juz27.jsx";
 import YJuz28 from "./components/pages/juz/Yasser/Juz28.jsx";
 import YJuz29 from "./components/pages/juz/Yasser/Juz29.jsx";
 import YJuz30 from "./components/pages/juz/Yasser/Juz30.jsx";
-import PDFViewer from "./components/pages/PDFViewer.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "/pdf",
-    element: <PDFViewer />,
   },
   {
     path: "/audios",

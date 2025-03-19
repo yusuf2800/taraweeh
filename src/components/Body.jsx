@@ -79,13 +79,13 @@ const Body = () => {
         <Link
           key={i}
           to={person.path}
-          className={`w-[250px] rounded-[5px] border-2 p-[8px] text-center text-[16px] font-[700] tracking-[2px] text-[var(--color)] uppercase decoration-[var(--color)] ${i === 0 ? "animate-slideDown" : ""} ${i === 1 ? "animate-slideRight" : ""} ${i === 2 ? "animate-slideLeft" : ""} ${i === 3 ? "animate-slideRight" : ""} ${i === 4 ? "animate-slideUp" : ""} hover:bg-[rgba(22,60,94,0.159)]`}
+          className={`w-[250px] rounded-[5px] border-2 border-(--color) p-[8px] text-center text-[16px] font-[700] tracking-[2px] text-(--color) uppercase decoration-[var(--color)] ${i === 0 ? "animate-slideDown" : ""} ${i === 1 ? "animate-slideRight" : ""} ${i === 2 ? "animate-slideLeft" : ""} ${i === 3 ? "animate-slideRight" : ""} ${i === 4 ? "animate-slideUp2" : ""} hover:bg-[rgba(22,60,94,0.159)]`}
         >
           {person.name}
         </Link>
       ))}
       <Link
-        className="animate-slideUp absolute bottom-[30px] w-[200px] animate-bounce rounded-[5px] border-2 p-[10px] text-center text-[12px] font-[700] text-(--color) decoration-(--color) hover:bg-[rgba(22,60,94,0.159)]"
+        className="animate-slideUp2 absolute bottom-[30px] w-[200px] animate-bounce rounded-[5px] border-2 border-(--color) p-[10px] text-center text-[12px] font-[700] text-(--color) decoration-(--color) hover:bg-[rgba(22,60,94,0.159)]"
         key="1345"
         to="/audios"
       >
@@ -141,7 +141,7 @@ const Body = () => {
         )}
         <br />
         <button
-          className="cursor-pointer rounded-[5px] border-[2px] border-[var(--color)] p-[5px] text-[16px] font-[650] tracking-[1px] text-[var(--color)] uppercase mt-[3px]"
+          className="mt-[3px] cursor-pointer rounded-[5px] border-[2px] border-[var(--color)] p-[5px] text-[16px] font-[650] tracking-[1px] text-[var(--color)] uppercase"
           onClick={view}
         >
           View
