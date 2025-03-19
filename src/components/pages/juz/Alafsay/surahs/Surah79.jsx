@@ -1,56 +1,52 @@
-import os
+import "../../../../../App.css";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
-for i in range(1, 115):
-    with open(f"src/components/pages/juz/Alafsay/surahs/Surah{i}.jsx", "w") as file:
-        file.write(f"""import "../../../../../App.css";
-import {{ Link }} from "react-router-dom";
-import {{ useEffect }} from "react";
-
-const Surah{i} = () => {{
-    useEffect(() => {{
-        document.title = "Surah {i}";
+const Surah79 = () => {
+    useEffect(() => {
+        document.title = "Surah 79";
         let metaTag = document.querySelector('meta[property="og:image"]');
 
-        if (metaTag) {{
+        if (metaTag) {
             metaTag.setAttribute(
                 "content",
                 "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
             );
-        }}
+        }
 
         const iconLink = document.querySelector('link[rel="apple-touch-icon"]');
-        if (iconLink) {{
+        if (iconLink) {
             iconLink.setAttribute(
                 "href",
                 "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860"
             );
-        }}
-    }}, []);
+        }
+    }, []);
 
     const audios = [
-        {{
-            id: {i},
-            name: "Surah {i}",
-            audio_path: `https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/surah{i}.mp3`,
+        {
+            id: 79,
+            name: "Surah 79",
+            audio_path: `https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/surah79.mp3`,
             file_path: "",
-        }},
+        },
     ];
 
     return (
         <div className="flex h-screen items-center justify-center bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
-            {{audios.map((audio) => (
+            {audios.map((audio) => (
                 <div
-                    key={{audio.id}}
+                    key={audio.id}
                     className="text-center animation-slideUp my-5 flex h-[230px] w-[400px] flex-col items-center justify-center rounded-[7px] px-5 py-4 text-[20px] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]"
                 >
-                    <label className="text-[var(--color)] font-bold">{{audio.name}}</label>
+                    <label className="text-[var(--color)] font-bold">{audio.name}</label>
                     <audio
-                        src={{audio.audio_path}}
+                        src={audio.audio_path}
                         controls
                         className="mt-3 w-[350px] cursor-pointer"
                     ></audio>
                 </div>
-            ))}}
+            ))}
             <Link to="/alafsay">
                 <button className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed right-5 bottom-5 flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]">
                     <svg
@@ -67,7 +63,6 @@ const Surah{i} = () => {{
             </Link>
         </div>
     );
-}};
+};
 
-export default Surah{i};
-""")
+export default Surah79;
