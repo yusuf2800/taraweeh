@@ -185,12 +185,583 @@ import Surah111 from "./components/pages/juz/Alafsay/surahs/Surah111.jsx";
 import Surah112 from "./components/pages/juz/Alafsay/surahs/Surah112.jsx";
 import Surah113 from "./components/pages/juz/Alafsay/surahs/Surah113.jsx";
 import Surah114 from "./components/pages/juz/Alafsay/surahs/Surah114.jsx";
+import Surah1Y from "./components/pages/juz/Yasser/surahs/Surah1.jsx";
+import Surah2Y from "./components/pages/juz/Yasser/surahs/Surah2.jsx";
+import Surah3Y from "./components/pages/juz/Yasser/surahs/Surah3.jsx";
+import Surah4Y from "./components/pages/juz/Yasser/surahs/Surah4.jsx";
+import Surah5Y from "./components/pages/juz/Yasser/surahs/Surah5.jsx";
+import Surah6Y from "./components/pages/juz/Yasser/surahs/Surah6.jsx";
+import Surah7Y from "./components/pages/juz/Yasser/surahs/Surah7.jsx";
+import Surah8Y from "./components/pages/juz/Yasser/surahs/Surah8.jsx";
+import Surah9Y from "./components/pages/juz/Yasser/surahs/Surah9.jsx";
+import Surah10Y from "./components/pages/juz/Yasser/surahs/Surah10.jsx";
+import Surah11Y from "./components/pages/juz/Yasser/surahs/Surah11.jsx";
+import Surah12Y from "./components/pages/juz/Yasser/surahs/Surah12.jsx";
+import Surah13Y from "./components/pages/juz/Yasser/surahs/Surah13.jsx";
+import Surah14Y from "./components/pages/juz/Yasser/surahs/Surah14.jsx";
+import Surah15Y from "./components/pages/juz/Yasser/surahs/Surah15.jsx";
+import Surah16Y from "./components/pages/juz/Yasser/surahs/Surah16.jsx";
+import Surah17Y from "./components/pages/juz/Yasser/surahs/Surah17.jsx";
+import Surah18Y from "./components/pages/juz/Yasser/surahs/Surah18.jsx";
+import Surah19Y from "./components/pages/juz/Yasser/surahs/Surah19.jsx";
+import Surah20Y from "./components/pages/juz/Yasser/surahs/Surah20.jsx";
+import Surah21Y from "./components/pages/juz/Yasser/surahs/Surah21.jsx";
+import Surah22Y from "./components/pages/juz/Yasser/surahs/Surah22.jsx";
+import Surah23Y from "./components/pages/juz/Yasser/surahs/Surah23.jsx";
+import Surah24Y from "./components/pages/juz/Yasser/surahs/Surah24.jsx";
+import Surah25Y from "./components/pages/juz/Yasser/surahs/Surah25.jsx";
+import Surah26Y from "./components/pages/juz/Yasser/surahs/Surah26.jsx";
+import Surah27Y from "./components/pages/juz/Yasser/surahs/Surah27.jsx";
+import Surah28Y from "./components/pages/juz/Yasser/surahs/Surah28.jsx";
+import Surah29Y from "./components/pages/juz/Yasser/surahs/Surah29.jsx";
+import Surah30Y from "./components/pages/juz/Yasser/surahs/Surah30.jsx";
+import Surah31Y from "./components/pages/juz/Yasser/surahs/Surah31.jsx";
+import Surah32Y from "./components/pages/juz/Yasser/surahs/Surah32.jsx";
+import Surah33Y from "./components/pages/juz/Yasser/surahs/Surah33.jsx";
+import Surah34Y from "./components/pages/juz/Yasser/surahs/Surah34.jsx";
+import Surah35Y from "./components/pages/juz/Yasser/surahs/Surah35.jsx";
+import Surah36Y from "./components/pages/juz/Yasser/surahs/Surah36.jsx";
+import Surah37Y from "./components/pages/juz/Yasser/surahs/Surah37.jsx";
+import Surah38Y from "./components/pages/juz/Yasser/surahs/Surah38.jsx";
+import Surah39Y from "./components/pages/juz/Yasser/surahs/Surah39.jsx";
+import Surah40Y from "./components/pages/juz/Yasser/surahs/Surah40.jsx";
+import Surah41Y from "./components/pages/juz/Yasser/surahs/Surah41.jsx";
+import Surah42Y from "./components/pages/juz/Yasser/surahs/Surah42.jsx";
+import Surah43Y from "./components/pages/juz/Yasser/surahs/Surah43.jsx";
+import Surah44Y from "./components/pages/juz/Yasser/surahs/Surah44.jsx";
+import Surah45Y from "./components/pages/juz/Yasser/surahs/Surah45.jsx";
+import Surah46Y from "./components/pages/juz/Yasser/surahs/Surah46.jsx";
+import Surah47Y from "./components/pages/juz/Yasser/surahs/Surah47.jsx";
+import Surah48Y from "./components/pages/juz/Yasser/surahs/Surah48.jsx";
+import Surah49Y from "./components/pages/juz/Yasser/surahs/Surah49.jsx";
+import Surah50Y from "./components/pages/juz/Yasser/surahs/Surah50.jsx";
+import Surah51Y from "./components/pages/juz/Yasser/surahs/Surah51.jsx";
+import Surah52Y from "./components/pages/juz/Yasser/surahs/Surah52.jsx";
+import Surah53Y from "./components/pages/juz/Yasser/surahs/Surah53.jsx";
+import Surah54Y from "./components/pages/juz/Yasser/surahs/Surah54.jsx";
+import Surah55Y from "./components/pages/juz/Yasser/surahs/Surah55.jsx";
+import Surah56Y from "./components/pages/juz/Yasser/surahs/Surah56.jsx";
+import Surah57Y from "./components/pages/juz/Yasser/surahs/Surah57.jsx";
+import Surah58Y from "./components/pages/juz/Yasser/surahs/Surah58.jsx";
+import Surah59Y from "./components/pages/juz/Yasser/surahs/Surah59.jsx";
+import Surah60Y from "./components/pages/juz/Yasser/surahs/Surah60.jsx";
+import Surah61Y from "./components/pages/juz/Yasser/surahs/Surah61.jsx";
+import Surah62Y from "./components/pages/juz/Yasser/surahs/Surah62.jsx";
+import Surah63Y from "./components/pages/juz/Yasser/surahs/Surah63.jsx";
+import Surah64Y from "./components/pages/juz/Yasser/surahs/Surah64.jsx";
+import Surah65Y from "./components/pages/juz/Yasser/surahs/Surah65.jsx";
+import Surah66Y from "./components/pages/juz/Yasser/surahs/Surah66.jsx";
+import Surah67Y from "./components/pages/juz/Yasser/surahs/Surah67.jsx";
+import Surah68Y from "./components/pages/juz/Yasser/surahs/Surah68.jsx";
+import Surah69Y from "./components/pages/juz/Yasser/surahs/Surah69.jsx";
+import Surah70Y from "./components/pages/juz/Yasser/surahs/Surah70.jsx";
+import Surah71Y from "./components/pages/juz/Yasser/surahs/Surah71.jsx";
+import Surah72Y from "./components/pages/juz/Yasser/surahs/Surah72.jsx";
+import Surah73Y from "./components/pages/juz/Yasser/surahs/Surah73.jsx";
+import Surah74Y from "./components/pages/juz/Yasser/surahs/Surah74.jsx";
+import Surah75Y from "./components/pages/juz/Yasser/surahs/Surah75.jsx";
+import Surah76Y from "./components/pages/juz/Yasser/surahs/Surah76.jsx";
+import Surah77Y from "./components/pages/juz/Yasser/surahs/Surah77.jsx";
+import Surah78Y from "./components/pages/juz/Yasser/surahs/Surah78.jsx";
+import Surah79Y from "./components/pages/juz/Yasser/surahs/Surah79.jsx";
+import Surah80Y from "./components/pages/juz/Yasser/surahs/Surah80.jsx";
+import Surah81Y from "./components/pages/juz/Yasser/surahs/Surah81.jsx";
+import Surah82Y from "./components/pages/juz/Yasser/surahs/Surah82.jsx";
+import Surah83Y from "./components/pages/juz/Yasser/surahs/Surah83.jsx";
+import Surah84Y from "./components/pages/juz/Yasser/surahs/Surah84.jsx";
+import Surah85Y from "./components/pages/juz/Yasser/surahs/Surah85.jsx";
+import Surah86Y from "./components/pages/juz/Yasser/surahs/Surah86.jsx";
+import Surah87Y from "./components/pages/juz/Yasser/surahs/Surah87.jsx";
+import Surah88Y from "./components/pages/juz/Yasser/surahs/Surah88.jsx";
+import Surah89Y from "./components/pages/juz/Yasser/surahs/Surah89.jsx";
+import Surah90Y from "./components/pages/juz/Yasser/surahs/Surah90.jsx";
+import Surah91Y from "./components/pages/juz/Yasser/surahs/Surah91.jsx";
+import Surah92Y from "./components/pages/juz/Yasser/surahs/Surah92.jsx";
+import Surah93Y from "./components/pages/juz/Yasser/surahs/Surah93.jsx";
+import Surah94Y from "./components/pages/juz/Yasser/surahs/Surah94.jsx";
+import Surah95Y from "./components/pages/juz/Yasser/surahs/Surah95.jsx";
+import Surah96Y from "./components/pages/juz/Yasser/surahs/Surah96.jsx";
+import Surah97Y from "./components/pages/juz/Yasser/surahs/Surah97.jsx";
+import Surah98Y from "./components/pages/juz/Yasser/surahs/Surah98.jsx";
+import Surah99Y from "./components/pages/juz/Yasser/surahs/Surah99.jsx";
+import Surah100Y from "./components/pages/juz/Yasser/surahs/Surah100.jsx";
+import Surah101Y from "./components/pages/juz/Yasser/surahs/Surah101.jsx";
+import Surah102Y from "./components/pages/juz/Yasser/surahs/Surah102.jsx";
+import Surah103Y from "./components/pages/juz/Yasser/surahs/Surah103.jsx";
+import Surah104Y from "./components/pages/juz/Yasser/surahs/Surah104.jsx";
+import Surah105Y from "./components/pages/juz/Yasser/surahs/Surah105.jsx";
+import Surah106Y from "./components/pages/juz/Yasser/surahs/Surah106.jsx";
+import Surah107Y from "./components/pages/juz/Yasser/surahs/Surah107.jsx";
+import Surah108Y from "./components/pages/juz/Yasser/surahs/Surah108.jsx";
+import Surah109Y from "./components/pages/juz/Yasser/surahs/Surah109.jsx";
+import Surah110Y from "./components/pages/juz/Yasser/surahs/Surah110.jsx";
+import Surah111Y from "./components/pages/juz/Yasser/surahs/Surah111.jsx";
+import Surah112Y from "./components/pages/juz/Yasser/surahs/Surah112.jsx";
+import Surah113Y from "./components/pages/juz/Yasser/surahs/Surah113.jsx";
+import Surah114Y from "./components/pages/juz/Yasser/surahs/Surah114.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
+  {
+    path: "/surah1Y",
+    element: <Surah1Y />,
+  },
+  {
+    path: "/surah2Y",
+    element: <Surah2Y />,
+  },
+  {
+    path: "/surah3Y",
+    element: <Surah3Y />,
+  },
+  {
+    path: "/surah4Y",
+    element: <Surah4Y />,
+  },
+  {
+    path: "/surah5Y",
+    element: <Surah5Y />,
+  },
+  {
+    path: "/surah6Y",
+    element: <Surah6Y />,
+  },
+  {
+    path: "/surah7Y",
+    element: <Surah7Y />,
+  },
+  {
+    path: "/surah8Y",
+    element: <Surah8Y />,
+  },
+  {
+    path: "/surah9Y",
+    element: <Surah9Y />,
+  },
+  {
+    path: "/surah10Y",
+    element: <Surah10Y />,
+  },
+  {
+    path: "/surah11Y",
+    element: <Surah11Y />,
+  },
+  {
+    path: "/surah12Y",
+    element: <Surah12Y />,
+  },
+  {
+    path: "/surah13Y",
+    element: <Surah13Y />,
+  },
+  {
+    path: "/surah14Y",
+    element: <Surah14Y />,
+  },
+  {
+    path: "/surah15Y",
+    element: <Surah15Y />,
+  },
+  {
+    path: "/surah16Y",
+    element: <Surah16Y />,
+  },
+  {
+    path: "/surah17Y",
+    element: <Surah17Y />,
+  },
+  {
+    path: "/surah18Y",
+    element: <Surah18Y />,
+  },
+  {
+    path: "/surah19Y",
+    element: <Surah19Y />,
+  },
+  {
+    path: "/surah20Y",
+    element: <Surah20Y />,
+  },
+  {
+    path: "/surah21Y",
+    element: <Surah21Y />,
+  },
+  {
+    path: "/surah22Y",
+    element: <Surah22Y />,
+  },
+  {
+    path: "/surah23Y",
+    element: <Surah23Y />,
+  },
+  {
+    path: "/surah24Y",
+    element: <Surah24Y />,
+  },
+  {
+    path: "/surah25Y",
+    element: <Surah25Y />,
+  },
+  {
+    path: "/surah26Y",
+    element: <Surah26Y />,
+  },
+  {
+    path: "/surah27Y",
+    element: <Surah27Y />,
+  },
+  {
+    path: "/surah28Y",
+    element: <Surah28Y />,
+  },
+  {
+    path: "/surah29Y",
+    element: <Surah29Y />,
+  },
+  {
+    path: "/surah30Y",
+    element: <Surah30Y />,
+  },
+  {
+    path: "/surah31Y",
+    element: <Surah31Y />,
+  },
+  {
+    path: "/surah32Y",
+    element: <Surah32Y />,
+  },
+  {
+    path: "/surah33Y",
+    element: <Surah33Y />,
+  },
+  {
+    path: "/surah34Y",
+    element: <Surah34Y />,
+  },
+  {
+    path: "/surah35Y",
+    element: <Surah35Y />,
+  },
+  {
+    path: "/surah36Y",
+    element: <Surah36Y />,
+  },
+  {
+    path: "/surah37Y",
+    element: <Surah37Y />,
+  },
+  {
+    path: "/surah38Y",
+    element: <Surah38Y />,
+  },
+  {
+    path: "/surah39Y",
+    element: <Surah39Y />,
+  },
+  {
+    path: "/surah40Y",
+    element: <Surah40Y />,
+  },
+  {
+    path: "/surah41Y",
+    element: <Surah41Y />,
+  },
+  {
+    path: "/surah42Y",
+    element: <Surah42Y />,
+  },
+  {
+    path: "/surah43Y",
+    element: <Surah43Y />,
+  },
+  {
+    path: "/surah44Y",
+    element: <Surah44Y />,
+  },
+  {
+    path: "/surah45Y",
+    element: <Surah45Y />,
+  },
+  {
+    path: "/surah46Y",
+    element: <Surah46Y />,
+  },
+  {
+    path: "/surah47Y",
+    element: <Surah47Y />,
+  },
+  {
+    path: "/surah48Y",
+    element: <Surah48Y />,
+  },
+  {
+    path: "/surah49Y",
+    element: <Surah49Y />,
+  },
+  {
+    path: "/surah50Y",
+    element: <Surah50Y />,
+  },
+  {
+    path: "/surah51Y",
+    element: <Surah51Y />,
+  },
+  {
+    path: "/surah52Y",
+    element: <Surah52Y />,
+  },
+  {
+    path: "/surah53Y",
+    element: <Surah53Y />,
+  },
+  {
+    path: "/surah54Y",
+    element: <Surah54Y />,
+  },
+  {
+    path: "/surah55Y",
+    element: <Surah55Y />,
+  },
+  {
+    path: "/surah56Y",
+    element: <Surah56Y />,
+  },
+  {
+    path: "/surah57Y",
+    element: <Surah57Y />,
+  },
+  {
+    path: "/surah58Y",
+    element: <Surah58Y />,
+  },
+  {
+    path: "/surah59Y",
+    element: <Surah59Y />,
+  },
+  {
+    path: "/surah60Y",
+    element: <Surah60Y />,
+  },
+  {
+    path: "/surah61Y",
+    element: <Surah61Y />,
+  },
+  {
+    path: "/surah62Y",
+    element: <Surah62Y />,
+  },
+  {
+    path: "/surah63Y",
+    element: <Surah63Y />,
+  },
+  {
+    path: "/surah64Y",
+    element: <Surah64Y />,
+  },
+  {
+    path: "/surah65Y",
+    element: <Surah65Y />,
+  },
+  {
+    path: "/surah66Y",
+    element: <Surah66Y />,
+  },
+  {
+    path: "/surah67Y",
+    element: <Surah67Y />,
+  },
+  {
+    path: "/surah68Y",
+    element: <Surah68Y />,
+  },
+  {
+    path: "/surah69Y",
+    element: <Surah69Y />,
+  },
+  {
+    path: "/surah70Y",
+    element: <Surah70Y />,
+  },
+  {
+    path: "/surah71Y",
+    element: <Surah71Y />,
+  },
+  {
+    path: "/surah72Y",
+    element: <Surah72Y />,
+  },
+  {
+    path: "/surah73Y",
+    element: <Surah73Y />,
+  },
+  {
+    path: "/surah74Y",
+    element: <Surah74Y />,
+  },
+  {
+    path: "/surah75Y",
+    element: <Surah75Y />,
+  },
+  {
+    path: "/surah76Y",
+    element: <Surah76Y />,
+  },
+  {
+    path: "/surah77Y",
+    element: <Surah77Y />,
+  },
+  {
+    path: "/surah78Y",
+    element: <Surah78Y />,
+  },
+  {
+    path: "/surah79Y",
+    element: <Surah79Y />,
+  },
+  {
+    path: "/surah80Y",
+    element: <Surah80Y />,
+  },
+  {
+    path: "/surah81Y",
+    element: <Surah81Y />,
+  },
+  {
+    path: "/surah82Y",
+    element: <Surah82Y />,
+  },
+  {
+    path: "/surah83Y",
+    element: <Surah83Y />,
+  },
+  {
+    path: "/surah84Y",
+    element: <Surah84Y />,
+  },
+  {
+    path: "/surah85Y",
+    element: <Surah85Y />,
+  },
+  {
+    path: "/surah86Y",
+    element: <Surah86Y />,
+  },
+  {
+    path: "/surah87Y",
+    element: <Surah87Y />,
+  },
+  {
+    path: "/surah88Y",
+    element: <Surah88Y />,
+  },
+  {
+    path: "/surah89Y",
+    element: <Surah89Y />,
+  },
+  {
+    path: "/surah90Y",
+    element: <Surah90Y />,
+  },
+  {
+    path: "/surah91Y",
+    element: <Surah91Y />,
+  },
+  {
+    path: "/surah92Y",
+    element: <Surah92Y />,
+  },
+  {
+    path: "/surah93Y",
+    element: <Surah93Y />,
+  },
+  {
+    path: "/surah94Y",
+    element: <Surah94Y />,
+  },
+  {
+    path: "/surah95Y",
+    element: <Surah95Y />,
+  },
+  {
+    path: "/surah96Y",
+    element: <Surah96Y />,
+  },
+  {
+    path: "/surah97Y",
+    element: <Surah97Y />,
+  },
+  {
+    path: "/surah98Y",
+    element: <Surah98Y />,
+  },
+  {
+    path: "/surah99Y",
+    element: <Surah99Y />,
+  },
+  {
+    path: "/surah100Y",
+    element: <Surah100Y />,
+  },
+  {
+    path: "/surah101Y",
+    element: <Surah101Y />,
+  },
+  {
+    path: "/surah102Y",
+    element: <Surah102Y />,
+  },
+  {
+    path: "/surah103Y",
+    element: <Surah103Y />,
+  },
+  {
+    path: "/surah104Y",
+    element: <Surah104Y />,
+  },
+  {
+    path: "/surah105Y",
+    element: <Surah105Y />,
+  },
+  {
+    path: "/surah106Y",
+    element: <Surah106Y />,
+  },
+  {
+    path: "/surah107Y",
+    element: <Surah107Y />,
+  },
+  {
+    path: "/surah108Y",
+    element: <Surah108Y />,
+  },
+  {
+    path: "/surah109Y",
+    element: <Surah109Y />,
+  },
+  {
+    path: "/surah110Y",
+    element: <Surah110Y />,
+  },
+  {
+    path: "/surah111Y",
+    element: <Surah111Y />,
+  },
+  {
+    path: "/surah112Y",
+    element: <Surah112Y />,
+  },
+  {
+    path: "/surah113Y",
+    element: <Surah113Y />,
+  },
+  {
+    path: "/surah114Y",
+    element: <Surah114Y />,
+  },
+
   {
     path: "/surah1",
     element: <Surah1 />,
@@ -978,5 +1549,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

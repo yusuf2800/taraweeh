@@ -526,7 +526,7 @@ const Yasser = ({ name }) => {
             <Link
               key={i}
               className="relative flex h-[70px] w-[100%] rounded-[6px] border-[2px] border-(--color) bg-transparent p-[8px] font-[700]"
-              to=""
+              to={`/surah${i+1}Y`}
             >
               <div className="relative flex w-full">
                 <div className="grid w-[200px] grid-cols-2 grid-rows-1 gap-x-[10px]">
