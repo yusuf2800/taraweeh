@@ -1,27 +1,54 @@
 import "../../../../App.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const YJuz16 = ({ name }) => {
+  const audioRefs = useRef([]);
+
   useEffect(() => {
     document.title = name;
+
     let metaTag = document.querySelector('meta[property="og:image"]');
+    if (metaTag) {
+      metaTag.setAttribute(
+        "content",
+        "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860",
+      );
+    }
 
-    metaTag.setAttribute(
-      "content",
-      "https://api2.quran-pro.com/images/mishary-rashid-alafasy/mishary-rashid-alafasy-medium.webp?version=1686738242860",
-    );
     const iconLink = document.querySelector('link[rel="apple-touch-icon"]');
+    if (iconLink) {
+      iconLink.setAttribute(
+        "href",
+        "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565",
+      );
+    }
 
-    iconLink.setAttribute(
-      "href",
-      "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565",
-    );
     return () => {
       if (iconLink) {
         iconLink.setAttribute("href", "images/mosquePreview.png");
       }
     };
+  }, [name]);
+
+  useEffect(() => {
+    // Loop through audio elements and restore playback times
+    audioRefs.current.forEach((audio, index) => {
+      const savedTime = localStorage.getItem(`audio_${index}`);
+      if (savedTime) {
+        audio.currentTime = parseFloat(savedTime);
+      }
+
+      const handleTimeUpdate = () => {
+        localStorage.setItem(`audio_${index}`, audio.currentTime);
+      };
+
+      audio.addEventListener("timeupdate", handleTimeUpdate);
+
+      return () => {
+        audio.removeEventListener("timeupdate", handleTimeUpdate);
+      };
+    });
   }, []);
 
   const audios = [];
@@ -38,25 +65,26 @@ const YJuz16 = ({ name }) => {
       id: i,
       name: count,
       audio_path: `https://res.cloudinary.com/ddsiorkrx/video/upload/v1740422996/${count}A.mp3`,
-      file_path: `/quran pdfs/juz${Math.floor(count)}/${String(count)}.pdf`,
+      file_path: `/quran pdfs/juz{Math.floor(count)}/{String(count)}.pdf`,
     });
   }
 
   return (
     <div className="flex h-screen items-center justify-center bg-(--bg-color) bg-[image:var(--bg-img)]">
       <div className="animate-slideUp h-[250px] w-[350px] overflow-y-auto rounded-[10px] bg-[var(--bg-color)] p-[15px] text-center text-[var(--color)] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]">
-        {audios.map((audio) => (
+        {audios.map((audio, index) => (
           <div
-            className="animation-slideUp my-[20px] w-[100%] rounded-[7px] px-[5px] py-[15px] text-[20px] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]"
+            className="audio animation-slideUp my-[20px] w-[100%] rounded-[7px] px-[5px] py-[15px] text-[20px] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]"
             key={audio.id}
           >
             <label className="font-[500]">{audio.name}</label>
             <audio
+              ref={(el) => (audioRefs.current[index] = el)}
               src={audio.audio_path}
               controls
               className="mx-auto my-[10px] w-[285px] cursor-pointer"
             ></audio>
-            <a href={audio.file_path} >
+            <a href={audio.file_path}>
               <button className="h-[40px] w-[80px] cursor-pointer rounded-[5px] border-[2px] text-[16px] font-[700] tracking-[.5px] uppercase hover:bg-[rgba(22,60,94,0.159)]">
                 Learn
               </button>
@@ -83,3 +111,4 @@ const YJuz16 = ({ name }) => {
 };
 
 export default YJuz16;
+

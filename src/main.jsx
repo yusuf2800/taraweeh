@@ -300,10 +300,162 @@ import Surah112Y from "./components/pages/juz/Yasser/surahs/Surah112.jsx";
 import Surah113Y from "./components/pages/juz/Yasser/surahs/Surah113.jsx";
 import Surah114Y from "./components/pages/juz/Yasser/surahs/Surah114.jsx";
 
+import Juz1Y from "./components/pages/juz/Yasser/juz/Juz1.jsx";
+import Juz2Y from "./components/pages/juz/Yasser/juz/Juz2.jsx";
+import Juz3Y from "./components/pages/juz/Yasser/juz/Juz3.jsx";
+import Juz4Y from "./components/pages/juz/Yasser/juz/Juz4.jsx";
+import Juz5Y from "./components/pages/juz/Yasser/juz/Juz5.jsx";
+import Juz6Y from "./components/pages/juz/Yasser/juz/Juz6.jsx";
+import Juz7Y from "./components/pages/juz/Yasser/juz/Juz7.jsx";
+import Juz8Y from "./components/pages/juz/Yasser/juz/Juz8.jsx";
+import Juz9Y from "./components/pages/juz/Yasser/juz/Juz9.jsx";
+import Juz10Y from "./components/pages/juz/Yasser/juz/Juz10.jsx";
+import Juz11Y from "./components/pages/juz/Yasser/juz/Juz11.jsx";
+import Juz12Y from "./components/pages/juz/Yasser/juz/Juz12.jsx";
+import Juz13Y from "./components/pages/juz/Yasser/juz/Juz13.jsx";
+import Juz14Y from "./components/pages/juz/Yasser/juz/Juz14.jsx";
+import Juz15Y from "./components/pages/juz/Yasser/juz/Juz15.jsx";
+import Juz16Y from "./components/pages/juz/Yasser/juz/Juz16.jsx";
+import Juz17Y from "./components/pages/juz/Yasser/juz/Juz17.jsx";
+import Juz18Y from "./components/pages/juz/Yasser/juz/Juz18.jsx";
+import Juz19Y from "./components/pages/juz/Yasser/juz/Juz19.jsx";
+import Juz20Y from "./components/pages/juz/Yasser/juz/Juz20.jsx";
+import Juz21Y from "./components/pages/juz/Yasser/juz/Juz21.jsx";
+import Juz22Y from "./components/pages/juz/Yasser/juz/Juz22.jsx";
+import Juz23Y from "./components/pages/juz/Yasser/juz/Juz23.jsx";
+import Juz24Y from "./components/pages/juz/Yasser/juz/Juz24.jsx";
+import Juz25Y from "./components/pages/juz/Yasser/juz/Juz25.jsx";
+import Juz26Y from "./components/pages/juz/Yasser/juz/Juz26.jsx";
+import Juz27Y from "./components/pages/juz/Yasser/juz/Juz27.jsx";
+import Juz28Y from "./components/pages/juz/Yasser/juz/Juz28.jsx";
+import Juz29Y from "./components/pages/juz/Yasser/juz/Juz29.jsx";
+import Juz30Y from "./components/pages/juz/Yasser/juz/Juz30.jsx";
+
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/juz1Y",
+    element: <Juz1Y />,
+  },
+  {
+    path: "/juz2Y",
+    element: <Juz2Y />,
+  },
+  {
+    path: "/juz3Y",
+    element: <Juz3Y />,
+  },
+  {
+    path: "/juz4Y",
+    element: <Juz4Y />,
+  },
+  {
+    path: "/juz5Y",
+    element: <Juz5Y />,
+  },
+  {
+    path: "/juz6Y",
+    element: <Juz6Y />,
+  },
+  {
+    path: "/juz7Y",
+    element: <Juz7Y />,
+  },
+  {
+    path: "/juz8Y",
+    element: <Juz8Y />,
+  },
+  {
+    path: "/juz9Y",
+    element: <Juz9Y />,
+  },
+  {
+    path: "/juz10Y",
+    element: <Juz10Y />,
+  },
+  {
+    path: "/juz11Y",
+    element: <Juz11Y />,
+  },
+  {
+    path: "/juz12Y",
+    element: <Juz12Y />,
+  },
+  {
+    path: "/juz13Y",
+    element: <Juz13Y />,
+  },
+  {
+    path: "/juz14Y",
+    element: <Juz14Y />,
+  },
+  {
+    path: "/juz15Y",
+    element: <Juz15Y />,
+  },
+  {
+    path: "/juz16Y",
+    element: <Juz16Y />,
+  },
+  {
+    path: "/juz17Y",
+    element: <Juz17Y />,
+  },
+  {
+    path: "/juz18Y",
+    element: <Juz18Y />,
+  },
+  {
+    path: "/juz19Y",
+    element: <Juz19Y />,
+  },
+  {
+    path: "/juz20Y",
+    element: <Juz20Y />,
+  },
+  {
+    path: "/juz21Y",
+    element: <Juz21Y />,
+  },
+  {
+    path: "/juz22Y",
+    element: <Juz22Y />,
+  },
+  {
+    path: "/juz23Y",
+    element: <Juz23Y />,
+  },
+  {
+    path: "/juz24Y",
+    element: <Juz24Y />,
+  },
+  {
+    path: "/juz25Y",
+    element: <Juz25Y />,
+  },
+  {
+    path: "/juz26Y",
+    element: <Juz26Y />,
+  },
+  {
+    path: "/juz27Y",
+    element: <Juz27Y />,
+  },
+  {
+    path: "/juz28Y",
+    element: <Juz28Y />,
+  },
+  {
+    path: "/juz29Y",
+    element: <Juz29Y />,
+  },
+  {
+    path: "/juz30Y",
+    element: <Juz30Y />,
   },
   {
     path: "/surah1Y",

@@ -216,7 +216,7 @@ const Yasser = ({ name }) => {
     "Al-An'am",
     "Al-A'raf",
     "Al-Anfal",
-    "At-Taubah",
+    "At-Tawbah",
     "Yunus",
     "Hud",
     "Yusuf",
@@ -442,8 +442,14 @@ const Yasser = ({ name }) => {
     "The Mankind",
   ];
 
+  const yasser_juz = ["", ""]
+
   for (let i = 1; i < 31; i++) {
-    juzs.push({ juz: i, name: juz_names[i], ayah: quarter_ayahs[i] });
+    juzs.push({
+      juz: i,
+      name: juz_names[i],
+      ayah: quarter_ayahs[i],
+    });
   }
 
   for (let i = 1; i < 115; i++) {
@@ -526,7 +532,7 @@ const Yasser = ({ name }) => {
             <Link
               key={i}
               className="relative flex h-[70px] w-[100%] rounded-[6px] border-[2px] border-(--color) bg-transparent p-[8px] font-[700]"
-              to={`/surah${i+1}Y`}
+              to={`/surah${i + 1}Y`}
             >
               <div className="relative flex w-full">
                 <div className="grid w-[200px] grid-cols-2 grid-rows-1 gap-x-[10px]">
@@ -571,7 +577,7 @@ const Yasser = ({ name }) => {
             <Link
               key={i}
               className="relative flex h-[70px] w-[100%] rounded-[6px] border-[2px] border-(--color) bg-transparent p-[8px] font-[700]"
-              to=""
+              to={`/juz${juz}Y`}
             >
               <div className="relative flex w-full">
                 <div className="my-auto ml-[5px] flex h-[42px] w-[50px] rotate-45 items-center justify-center rounded-[7px] bg-(--color) text-(--bg-color)">

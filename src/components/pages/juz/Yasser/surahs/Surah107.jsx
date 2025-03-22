@@ -1,68 +1,103 @@
 import "../../../../../App.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-const Surah107Y = () => {
-    useEffect(() => {
-        document.title = "Surah 107";
-        let metaTag = document.querySelector('meta[property="og:image"]');
+const YSurah107 = ({ name }) => {
+  const audioRefs = useRef([]);
 
-        if (metaTag) {
-            metaTag.setAttribute(
-                "content",
-                "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565"
-            );
-        }
+  useEffect(() => {
+    document.title = name;
 
-        const iconLink = document.querySelector('link[rel="apple-touch-icon"]');
-        if (iconLink) {
-            iconLink.setAttribute(
-                "href",
-                "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565"
-            );
-        }
-    }, []);
+    let metaTag = document.querySelector('meta[property="og:image"]');
+    if (metaTag) {
+      metaTag.setAttribute(
+        "content",
+        "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565"
+      );
+    }
 
-    const audios = [
-        {
-            id: 107,
-            name: "Surah 107",
-            audio_path: `https://quanticapps.com/quran/yasser_ad-dussary/107.mp3`,
-            file_path: "",
-        },
-    ];
+    const iconLink = document.querySelector('link[rel="apple-touch-icon"]');
+    if (iconLink) {
+      iconLink.setAttribute(
+        "href",
+        "https://api2.quran-pro.com/images/yasser-al-dosari/yasser-al-dosari-medium.webp?version=1686734240565"
+      );
+    }
 
-    return (
-        <div className="flex h-screen items-center justify-center bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
-            {audios.map((audio) => (
-                <div
-                    key={audio.id}
-                    className="text-center animation-slideUp my-5 flex h-[230px] w-[400px] flex-col items-center justify-center rounded-[7px] px-5 py-4 text-[20px] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]"
-                >
-                    <label className="text-[var(--color)] font-bold">{audio.name}</label>
-                    <audio
-                        src={audio.audio_path}
-                        controls
-                        className="mt-3 w-[350px] cursor-pointer"
-                    ></audio>
-                </div>
-            ))}
-            <Link to="/yasser">
-                <button className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed right-5 bottom-5 flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]">
-                    <svg
-                        className="back"
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="30px"
-                        viewBox="0 -960 960 960"
-                        width="30px"
-                        fill="rgb(22, 60, 94)"
-                    >
-                        <path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
-                    </svg>
-                </button>
-            </Link>
-        </div>
-    );
+    return () => {
+      if (iconLink) {
+        iconLink.setAttribute("href", "images/mosquePreview.png");
+      }
+    };  
+  }, [name]);
+
+  useEffect(() => {
+    // Loop through audio elements and restore playback times
+    audioRefs.current.forEach((audio, index) => {
+      const savedTime = localStorage.getItem(`audio_${index}`);
+      if (savedTime) {
+        audio.currentTime = parseFloat(savedTime);
+      }
+
+      const handleTimeUpdate = () => {
+        localStorage.setItem(`audio_${index}`, audio.currentTime);
+      };
+
+      audio.addEventListener("timeupdate", handleTimeUpdate);
+
+      return () => {
+        audio.removeEventListener("timeupdate", handleTimeUpdate);
+      };
+    });
+  }, []);
+
+  const audios = [];
+  audios.push({
+    id: 107,
+    name: `Surah 107`,
+    audio_path: `https://quanticapps.com/quran/yasser_ad-dussary/107.mp3`,
+    file_path: ""
+  });
+
+  return (
+    <div className="flex h-screen items-center justify-center bg-(--bg-color) bg-[image:var(--bg-img)]">
+      <div className="animate-slideUp h-[250px] w-[350px] overflow-y-auto rounded-[10px] bg-[var(--bg-color)] p-[15px] text-center text-[var(--color)] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]">
+        {audios.map((audio, index) => (
+          <div
+            className="audio animation-slideUp my-[20px] w-[100%] rounded-[7px] px-[5px] py-[15px] text-[20px] shadow-[2px_2px_10px_rgba(0,0,0,0.4)]"
+            key={audio.id}
+          >
+            <label className="font-[500]">{audio.name}</label>
+            <audio
+              ref={(el) => (audioRefs.current[index] = el)}
+              src={audio.audio_path}
+              controls
+              className="mx-auto my-[10px] w-[285px] cursor-pointer"
+            ></audio>
+            <a href={audio.file_path}>
+              <button className="h-[40px] w-[80px] cursor-pointer rounded-[5px] border-[2px] text-[16px] font-[700] tracking-[.5px] uppercase hover:bg-[rgba(22,60,94,0.159)]">
+                Learn
+              </button>
+            </a>
+          </div>
+        ))}
+      </div>
+      <Link key={Math.random()} to="/yasser">
+        <button className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed right-[20px] bottom-[20px] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]">
+          <svg
+            className="back"
+            xmlns="http://www.w3.org/2000/svg"
+            height="30px"
+            viewBox="0 -960 960 960"
+            width="30px"
+            fill="rgb(22, 60, 94)"
+          >
+            <path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" />
+          </svg>
+        </button>
+      </Link>
+    </div>
+  );
 };
 
-export default Surah107Y;
+export default YSurah107;
