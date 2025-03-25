@@ -74,7 +74,11 @@ const Body = () => {
   }, [isModalOpen]);
 
   return (
-    <div className="flex h-screen flex-col items-center justify-center gap-[15px] overflow-y-hidden bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
+    <div className="relative flex h-screen flex-col items-center justify-center gap-[15px] overflow-y-hidden bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
+      <header className="absolute top-0 w-screen bg-(--color) p-[2px] text-center text-[13px] font-[700] text-(--bg-color)">
+        A new improved website will be built over the next few months. <br />
+        In sh Allah
+      </header>
       {names.map((person, i) => (
         <Link
           key={i}
@@ -92,7 +96,7 @@ const Body = () => {
         Level Up Your Recitation
       </Link>
       <button
-        className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight fixed top-[20px] right-[20px] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]"
+        className="bg-[rgba(253, 240, 220, 0.3)] animate-slideRight absolute top-[20px] right-[20px] z-[99999] flex h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-[5px] shadow-[2px_2px_10px_rgba(0,0,0,0.3)]"
         onClick={openModal}
       >
         <svg
