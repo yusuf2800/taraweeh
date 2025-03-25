@@ -47,9 +47,9 @@ const Audios = () => {
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center gap-[15px] overflow-y-auto bg-[var(--bg-color)] bg-[image:var(--bg-img)]">
-      <header className="absolute top-0 w-screen bg-(--color) p-[2px] text-center text-[13px] font-[700] text-(--bg-color)">
-        A new improved website will be built over the next few months. <br />
-        In sh Allah
+      <header className="absolute top-0 w-screen bg-(--color) p-[2px] text-center text-[11px] font-[700] text-(--bg-color) lg:text-[14px]">
+        A new, improved website will be built over the next few months. <br />
+        In sha Allah
       </header>
       <div className="animate-slideUp my-[25px] flex h-auto flex-wrap items-center justify-center gap-[30px] text-center">
         {reciters.map((reciter, i) => (
