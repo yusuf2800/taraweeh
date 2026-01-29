@@ -8,11 +8,11 @@ const Body = () => {
   }, []);
 
   const names = [
-    { id: "hs", name: "hamzah/yusuf", path: "/hb-yp" },
+    { id: "wy", name: "wasim/yasin", path: "/wm-ya" },
+    { id: "hb", name: "hamzah", path: "/hamzah" },
+    { id: "yp", name: "yusuf", path: "/yusuf" },
     { id: "ap", name: "aasim", path: "/aasim" },
-    { id: "wm", name: "wasim/yasin", path: "/wm-ya" },
     { id: "ys", name: "yoosuf", path: "/yoosuf" },
-    { id: "sa", name: "shameer", path: "/shameer" },
   ];
 
   const modalRef = useRef(null);
